@@ -1,0 +1,30 @@
+@import "neat-helpers";
+
+// grid settings
+// $column: 20em;
+// $gutter: 2em;
+// $grid-columns: 2;
+$max-width: 1024px;
+
+
+// ------------------------------------------------------------
+// Override Neat's grid settings
+// ------------------------------------------------------------
+
+$column: golden-ratio(1em, 3) !default; // Column width
+$gutter: golden-ratio(1em, 3) !default; // Gutter between each two columns
+
+// ------------------------------------------------------------
+// Set Bourbon's flex-grid variables to match what Neat is doing
+// http://bourbon.io/docs/#flex-grid
+// ------------------------------------------------------------
+
+$fg-column: $column;
+$fg-gutter: $gutter;
+
+
+// breakpoints
+$breakTabletPortrait: new-breakpoint(min-width 481px);
+$breakTabletLandscape: new-breakpoint(min-width 769px);
+$breakDesktop: new-breakpoint(min-width 1025px);
+$breakLargescreen: new-breakpoint(min-width 1201px);
