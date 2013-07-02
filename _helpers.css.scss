@@ -1,0 +1,70 @@
+//-------------------------------------
+// Alignment
+//-------------------------------------
+
+.text-left {}
+
+.text-center {}
+
+.text-right {}
+
+
+//-------------------------------------
+// Display
+//-------------------------------------
+
+%inline {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+%pull-right {
+  float: right;
+}
+
+%hidden {
+  display: none;
+}
+
+
+/* responsive display classes */
+
+.visible-phone {}
+.visible-tablet { @include media($breakTabletPortrait) }
+.visible-desktop { @include media($breakTabletPortrait) }
+
+.hidden-phone {}
+.hidden-tablet {}
+.hidden-desktop {}
+
+// add-on mixin for NEAT
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
+//-------------------------------------
+// Margins
+//-------------------------------------
+
+%no-margin { margin: 0 }
+%no-margin-top { margin-top: 0 }
+%no-margin-bottom { margin-bottom: 0 }
+
+%margin-top-tiny { margin-top: 5px }
+%margin-top-small { margin-top: 10px }
+%margin-top-medium { margin-top: 20px }
+%margin-top-large { margin-top: 50px }
+
+%margin-bottom-tiny { margin-bottom: 5px }
+%margin-bottom-small { margin-bottom: 10px }
+%margin-bottom-medium { margin-bottom: 20px }
+%margin-bottom-large { margin-bottom: 50px }
+
+//-------------------------------------
+// Border
+//-------------------------------------
+
+%no-border {
+  border: none;
+}

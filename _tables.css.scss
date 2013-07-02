@@ -1,0 +1,35 @@
+table {
+  *border-collapse: collapse; /* IE7 and lower */
+  border-spacing: 0;
+  text-align: left;
+
+  td, th {
+    padding: .5em 0;
+  }
+
+  th {
+    background-color: $colorDarkGrey;
+    color: $colorOffWhite;
+    font-weight: 300;
+  }
+
+  td {
+    border-top: 1px solid $colorBorderLight;
+  }
+
+  tfoot {
+    td {
+      text-align: center;
+    }
+  }
+
+  &.striped {
+    td, th {
+      padding: .5em;
+    }
+
+    tr:nth-child(2n) { background-color: $colorOffWhite }
+  }
+
+  &.condensed {}
+}

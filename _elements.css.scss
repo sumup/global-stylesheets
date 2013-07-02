@@ -1,0 +1,69 @@
+//-------------------------------------
+// Lists
+//-------------------------------------
+
+ul {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    padding-left: 1em;
+    margin-bottom: .5em;
+    position: relative;
+
+    &:before {
+      display: block;
+      content: '\3e';
+      font-family: sumup-icons;
+      position: absolute;
+      top: 0;
+      left: -0.3em;
+    }
+  }
+
+  &.unstyled {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      padding-left: 0;
+      margin-bottom: 0;
+
+      &:before { content: "" }
+    }
+  }
+
+  &.styled {
+    &.checkmark li:before {
+      content: '\2713';
+      top: 50%;
+      margin-top: -0.6em;
+      color: $colorSuccess;
+      text-shadow: 0 1px 0 rgba(black, .3);
+    }
+  }
+
+  &.footnotes li {
+    line-height: .8em;
+  }
+}
+
+ol {}
+
+/* Description lists */
+
+dl {}
+
+dt {}
+
+dd {}
+
+
+//-------------------------------------
+// images
+//-------------------------------------
+
+img {
+  max-width: 100%;
+}
