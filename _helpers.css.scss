@@ -29,13 +29,13 @@
 
 /* responsive display classes */
 
-.visible-phone {}
-.visible-tablet { @include media($breakTabletPortrait) }
-.visible-desktop { @include media($breakTabletPortrait) }
+// .visible-phone {}
+// .visible-tablet { @include media($breakTabletPortrait) }
+// .visible-desktop { @include media($breakTabletPortrait) }
 
-.hidden-phone {}
-.hidden-tablet {}
-.hidden-desktop {}
+// .hidden-phone {}
+// .hidden-tablet {}
+// .hidden-desktop {}
 
 // add-on mixin for NEAT
 @mixin omega-reset($nth) {
@@ -67,4 +67,12 @@
 
 %no-border {
   border: none;
+}
+
+//-------------------------------------
+// Colors
+//-------------------------------------
+
+%highlight {
+  color: $colorCorpHighlight;
 }
