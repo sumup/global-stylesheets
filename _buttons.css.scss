@@ -38,6 +38,11 @@
     color: $colorDarkGrey;
     background-color: $colorLightGrey;
     border-bottom-color: $colorBorderLight;
+    text-shadow: none;
+
+    &:hover {
+      background-color: lighten($colorLightGrey, 5%);
+    }
   }
 
   &.white {
@@ -50,6 +55,7 @@
 
   &.small {
     font-size: .8em;
+    padding: .5em .9em;
   }
 
   &.medium {
@@ -67,6 +73,24 @@
 
       .icon { margin-right: 3px }
     }
+  }
+}
+
+.pill-button {
+  @include transition(all .2s);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: .7em;
+  padding: .2em 1em;
+  line-height: 1em;
+  background-color: $colorLightGrey;
+  color: $colorDarkGrey;
+  border-radius: 999px;
+
+
+  &:hover {
+    background-color: lighten($colorLightGrey, 5%);
   }
 }
 

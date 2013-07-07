@@ -25,6 +25,9 @@ you can use the generic selector below, but it's slower:
   text-transform: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
+  // custom
+  position: relative;
+  top: 0.1em;
 }
 .icon-tag:before {
   content: "\74";
