@@ -107,7 +107,7 @@ blockquote {
     display: inline-block;
     padding-left: 0.5em;
     margin-left: 2em;
-    border-left: 1px solid $colorOffWhite;
+    // border-left: 1px solid $colorOffWhite;
     font-style: italic;
 
     &:before {
@@ -133,9 +133,10 @@ blockquote {
   cite {
     @extend %margin-top-tiny;
     display: block;
-    font-size: .7em;
+    font-size: .8em;
     line-height: 1.2em;
     float: right;
+    color: lighten($colorDarkGrey, 15%);
 
 
     & > span {
@@ -143,6 +144,6 @@ blockquote {
       font-style: normal;
     }
 
-    .name { color: $colorCorpHighlight }
+    // .name { color: $colorCorpHighlight }
   }
 }
