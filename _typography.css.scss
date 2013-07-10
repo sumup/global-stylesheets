@@ -9,7 +9,7 @@ body {
   font-family: $fontFamilyBody;
   font-weight: 300;
   font-size: 14px;
-  line-height: 1.3em;
+  line-height: 1.4em;
   color: $colorDarkGrey;
 
   @include media($breakTabletPortrait) { font-size: 16px }
