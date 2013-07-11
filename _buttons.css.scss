@@ -98,6 +98,7 @@
     .icon-spinner {
       @include animation(rotating .5s linear infinite);
       position: absolute;
+      font-size: em(18, 13);
       left: 50%;
       top: -2em;
       margin: -0.5em 0 0 -0.5em;
