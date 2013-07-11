@@ -75,6 +75,44 @@
       .icon { margin-right: 3px }
     }
   }
+
+  /* states */
+
+  &.disabled {
+    opacity: .5;
+    cursor: default;
+  }
+
+  &.has-loading-indicator {
+    overflow: hidden;
+    position: relative;
+
+    .btn-content,
+    .icon-spinner {
+      @include transition(all .15s ease-in-out);
+      display: inline-block;
+    }
+
+    .btn-content { position: relative }
+
+    .icon-spinner {
+      @include animation(rotating .5s linear infinite);
+      position: absolute;
+      left: 50%;
+      top: -2em;
+      margin: -0.5em 0 0 -0.5em;
+    }
+
+    &.loading {
+      .btn-content {
+        top: 2em;
+      }
+
+      .icon-spinner {
+        top: 50%;
+      }
+    }
+  }
 }
 
 .pill-button {
