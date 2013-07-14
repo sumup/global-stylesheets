@@ -1,0 +1,130 @@
+.form-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  & > li {
+    margin-bottom: em(20);
+    position: relative;
+  }
+
+  label {
+    @include transition(color .2s);
+    display: block;
+    margin-bottom: 1px;
+    font: {
+      size: em(10, 14);
+      weight: 400;
+    };
+    text-transform: uppercase;
+    color: $colorDarkGrey;
+  }
+
+  .active label { color: $colorCorpHighlight }
+
+  textarea,
+  input {
+    outline: none;
+  }
+
+  .form-help .help-tooltip {
+    left: 70%;
+    top: em(22, 14);
+
+    &.to-left { left: 31% }
+
+    @include media($breakDesktop) {
+      left: 103%;
+
+      &.to-left { left: 103% }
+      &.to-left:before { display: block }
+      &.to-left:after { display: none }
+    }
+  }
+
+  .active .form-help .help-tooltip {
+    @include animation(fadeInRight .3s .1s ease-out backwards);
+    display: block;
+  }
+
+  input,
+  select {
+    @include transition (border-color .2s);
+    @include placeholder {
+      color: $colorLightGrey;
+    }
+
+    width: 100%;
+    border: 1px solid $colorLightGrey;
+    border-radius: $layoutCornerRadius;
+    padding: em(10) em(15);
+    font: {
+      size: em(18);
+      weight: 400;
+      family: $fontFamilyBody;
+    };
+
+
+    &:focus,
+    &:hover {
+      border-color: $colorCorpHighlight;
+    }
+  }
+
+  input {
+    -webkit-appearance: textfield;
+  }
+
+  .select-wrapper {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      top: 30%;
+      right: em(5);
+      content: "";
+      font-family: "entypo";
+      font-size: 4em;
+    }
+  }
+
+  select {
+    -webkit-appearance: none;
+  }
+
+  .with-card-icon {
+    position: relative;
+
+    .card-icon {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      top: 50%;
+      right: 10px;
+      margin-top: -17px;
+
+      &.visa {
+        @include retina-image("../images/card-icons/visa", 32px 32px);
+      }
+
+      &.cvv {
+        @include retina-image("../images/card-icons/cvv", 32px 32px);
+      }
+    }
+  }
+}
+
+.button-set {
+  @include clearfix;
+  margin-top: em(30);
+
+  p {
+        // @include span-columns(5 of 9);
+        margin-top: 0;
+      }
+
+      &.right .button {
+        float: right;
+        margin-left: em(20)
+      }
+    }
