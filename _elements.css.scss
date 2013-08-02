@@ -49,7 +49,10 @@ ul {
   }
 }
 
-ol {}
+ol {
+  list-style-type: decimal;
+  margin-left: 1.3em;
+}
 
 /* Description lists */
 
