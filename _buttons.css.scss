@@ -173,6 +173,7 @@
   }
 
   .like-count {
+    opacity: 0;
     z-index: 1;
     font-size: .8em;
     display: inline-block;
@@ -185,5 +186,9 @@
     line-height: 1em;
     // color: lighten($colorDarkGrey, 20%);
     margin-left: -(em(8));
+
+    &.loaded {
+      @include animation(fadeInLeft .3s 0s ease-out forwards)
+    }
   }
 }
