@@ -172,6 +172,7 @@
   .like-count {
     @extend %inline;
     position: relative;
+    height: 23px;
   }
 
   .button {
@@ -181,16 +182,16 @@
   .like-count {
     opacity: 0;
     z-index: 1;
-    font-size: .8em;
-    display: inline-block;
+    font-size: em(10, 14);
+    // display: inline-block;
     border: 1px solid;
     border-color: lighten($colorDarkGrey, 40%);
     border-left: none;
     border-radius: 0 $layoutCornerRadius $layoutCornerRadius 0;
     background-color: rgba($colorOffWhite, .8);
     font-weight: 500;
-    padding: .46em .7em;
-    line-height: 1em;
+    padding: 0 .7em;
+    line-height: 21px;
     // color: lighten($colorDarkGrey, 20%);
     margin-left: -(em(8));
 
