@@ -16,7 +16,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-tag, .icon-phone, .icon-screen, .icon-tablet, .icon-bubbles, .icon-spinner, .icon-cog, .icon-eye, .icon-mobile, .icon-play, .icon-list, .icon-arrow-right, .icon-lifebuoy, .icon-twitter, .icon-facebook, .icon-vimeo, .icon-login, .icon-logout, .icon-link, .icon-apple, .icon-android, .icon-cross, .icon-checkmark, .icon-plus-alt, .icon-minus-alt, .icon-info, .icon-calendar, .icon-params, .icon-banknote, .icon-t-shirt, .icon-cup, .icon-next, .icon-previous, .icon-download, .icon-printer, .icon-credit {
+.icon-tag, .icon-phone, .icon-screen, .icon-tablet, .icon-bubbles, .icon-spinner, .icon-cog, .icon-eye, .icon-mobile, .icon-play, .icon-list, .icon-arrow-right, .icon-lifebuoy, .icon-twitter, .icon-facebook, .icon-vimeo, .icon-login, .icon-logout, .icon-link, .icon-apple, .icon-android, .icon-cross, .icon-checkmark, .icon-plus-alt, .icon-minus-alt, .icon-info, .icon-params, .icon-banknote, .icon-t-shirt, .icon-cup, .icon-next, .icon-previous, .icon-download, .icon-printer, .icon-credit, .icon-pencil, .icon-arrow-up {
   font-family: 'sumup-icons';
   speak: none;
   font-style: normal;
@@ -107,9 +107,6 @@ you can use the generic selector below, but it's slower:
 .icon-info:before {
   content: "\69";
 }
-.icon-calendar:before {
-  content: "\21";
-}
 .icon-params:before {
   content: "\23";
 }
@@ -136,4 +133,10 @@ you can use the generic selector below, but it's slower:
 }
 .icon-credit:before {
   content: "\25";
+}
+.icon-pencil:before {
+  content: "\26";
+}
+.icon-arrow-up:before {
+  content: "\2a";
 }

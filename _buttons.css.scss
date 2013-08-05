@@ -70,6 +70,12 @@
     }
   }
 
+  &.outline {
+    background-color: transparent;
+    border: 1px solid;
+    border-color: $colorBorderLight;
+  }
+
   /* sizes */
 
   &.small {
@@ -177,7 +183,8 @@
     z-index: 1;
     font-size: .8em;
     display: inline-block;
-    border: 1px solid lighten($colorDarkGrey, 40%);
+    border: 1px solid;
+    border-color: lighten($colorDarkGrey, 40%);
     border-left: none;
     border-radius: 0 $layoutCornerRadius $layoutCornerRadius 0;
     background-color: rgba($colorOffWhite, .8);
