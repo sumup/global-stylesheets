@@ -72,3 +72,14 @@ dd {}
 img {
   max-width: 100%;
 }
+
+//-------------------------------------
+// Code
+//-------------------------------------
+
+pre {
+  background-color: $colorLightGrey;
+  display: inline-block;
+  padding: .2em 1em;
+  border-radius: $layoutCornerRadius;
+}
