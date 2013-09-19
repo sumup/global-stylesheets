@@ -18,7 +18,7 @@
   border-radius: $layoutCornerRadius;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: darken($colorCorpHighlight, 7%);
+  border-bottom-color: $colorCorpHighlightDarker;
   padding: 0.8em 1em;
   background-color: $colorCorpHighlight;
   color: white;
@@ -31,7 +31,7 @@
 
   &:hover {
     color: white;
-    background-color: lighten($colorCorpHighlight, 10%);
+    background-color: $colorCorpHighlightLighter;
   }
 
   &.grey {
