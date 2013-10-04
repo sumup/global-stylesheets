@@ -17,7 +17,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-tag, .icon-phone, .icon-screen, .icon-tablet, .icon-bubbles, .icon-spinner, .icon-cog, .icon-eye, .icon-mobile, .icon-play, .icon-list, .icon-arrow-right, .icon-lifebuoy, .icon-twitter, .icon-facebook, .icon-vimeo, .icon-login, .icon-logout, .icon-link, .icon-apple, .icon-android, .icon-cross, .icon-checkmark, .icon-plus-alt, .icon-minus-alt, .icon-info, .icon-params, .icon-banknote, .icon-t-shirt, .icon-cup, .icon-next, .icon-previous, .icon-download, .icon-printer, .icon-credit, .icon-pencil, .icon-arrow-up, .icon-erase {
+.icon-tag, .icon-phone, .icon-screen, .icon-tablet, .icon-bubbles, .icon-spinner, .icon-eye, .icon-mobile, .icon-cog, .icon-list, .icon-arrow-left, .icon-untitled, .icon-lifebuoy, .icon-twitter, .icon-facebook, .icon-vimeo, .icon-login, .icon-logout, .icon-link, .icon-checkmark, .icon-info, .icon-params, .icon-banknote, .icon-t-shirt, .icon-cup, .icon-arrow-right, .icon-arrow-left-2, .icon-cloud-download, .icon-print, .icon-credit-card, .icon-pencil, .icon-arrow-up, .icon-erase, .icon-play {
   font-family: 'sumup-icons';
   speak: none;
   font-style: normal;
@@ -26,121 +26,106 @@ you can use the generic selector below, but it's slower:
   text-transform: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  // custom
-  position: relative;
-  top: 0.1em;
 }
 .icon-tag:before {
-  content: "\74";
+  content: "\21";
 }
 .icon-phone:before {
-  content: "\70";
+  content: "\22";
 }
 .icon-screen:before {
-  content: "\64";
+  content: "\23";
 }
 .icon-tablet:before {
-  content: "\54";
+  content: "\24";
 }
 .icon-bubbles:before {
-  content: "\63";
+  content: "\25";
 }
 .icon-spinner:before {
-  content: "\25d0";
-}
-.icon-cog:before {
-  content: "\43";
+  content: "\26";
 }
 .icon-eye:before {
-  content: "\65";
+  content: "\27";
 }
 .icon-mobile:before {
-  content: "\50";
+  content: "\28";
 }
-.icon-play:before {
-  content: "\25b8";
+.icon-cog:before {
+  content: "\2a";
 }
 .icon-list:before {
-  content: "\2630";
+  content: "\2b";
+}
+.icon-arrow-left:before {
+  content: "\2c";
+}
+.icon-untitled:before {
+  content: "\2d";
+}
+.icon-lifebuoy:before {
+  content: "\2e";
+}
+.icon-twitter:before {
+  content: "\74";
+}
+.icon-facebook:before {
+  content: "\66";
+}
+.icon-vimeo:before {
+  content: "\76";
+}
+.icon-login:before {
+  content: "\32";
+}
+.icon-logout:before {
+  content: "\33";
+}
+.icon-link:before {
+  content: "\34";
+}
+.icon-checkmark:before {
+  content: "\2714";
+}
+.icon-info:before {
+  content: "\36";
+}
+.icon-params:before {
+  content: "\37";
+}
+.icon-banknote:before {
+  content: "\38";
+}
+.icon-t-shirt:before {
+  content: "\39";
+}
+.icon-cup:before {
+  content: "\3a";
 }
 .icon-arrow-right:before {
   content: "\3e";
 }
-.icon-lifebuoy:before {
-  content: "\25ce";
+.icon-arrow-left-2:before {
+  content: "\3c";
 }
-.icon-twitter:before {
-  content: "\e005";
+.icon-cloud-download:before {
+  content: "\3d";
 }
-.icon-facebook:before {
-  content: "\e006";
+.icon-print:before {
+  content: "\70";
 }
-.icon-vimeo:before {
-  content: "\e008";
-}
-.icon-login:before {
-  content: "\25a0";
-}
-.icon-logout:before {
-  content: "\25a1";
-}
-.icon-link:before {
-  content: "\219d";
-}
-.icon-apple:before {
-  content: "\e000";
-}
-.icon-android:before {
-  content: "\e001";
-}
-.icon-cross:before {
-  content: "\2715";
-}
-.icon-checkmark:before {
-  content: "\2713";
-}
-.icon-plus-alt:before {
-  content: "\e004";
-}
-.icon-minus-alt:before {
-  content: "\e007";
-}
-.icon-info:before {
-  content: "\69";
-}
-.icon-params:before {
-  content: "\23";
-}
-.icon-banknote:before {
-  content: "\27";
-}
-.icon-t-shirt:before {
-  content: "\28";
-}
-.icon-cup:before {
-  content: "\29";
-}
-.icon-next:before {
-  content: "\7d";
-}
-.icon-previous:before {
-  content: "\7b";
-}
-.icon-download:before {
-  content: "\22";
-}
-.icon-printer:before {
-  content: "\24";
-}
-.icon-credit:before {
-  content: "\25";
+.icon-credit-card:before {
+  content: "\3f";
 }
 .icon-pencil:before {
-  content: "\26";
+  content: "\40";
 }
 .icon-arrow-up:before {
-  content: "\2a";
+  content: "\41";
 }
 .icon-erase:before {
-  content: "\21";
+  content: "\42";
+}
+.icon-play:before {
+  content: "\43";
 }
