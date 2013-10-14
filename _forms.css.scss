@@ -57,9 +57,9 @@
     width: 100%;
     border: 1px solid $colorLightGrey;
     border-radius: $layoutCornerRadius;
-    padding: em(10) em(15);
+    padding: 0.8em 1em;
     font: {
-      size: em(18);
+      size: em(16, 14);
       weight: 400;
       family: $fontFamilyBody;
     };
@@ -72,7 +72,7 @@
   }
 
   input {
-    -webkit-appearance: textfield;
+    -webkit-appearance: none;
   }
 
   .select-wrapper {
@@ -119,12 +119,12 @@
   margin-top: em(30);
 
   p {
-        // @include span-columns(5 of 9);
-        margin-top: 0;
-      }
+    // @include span-columns(5 of 9);
+    margin-top: 0;
+  }
 
-      &.right .button {
-        float: right;
-        margin-left: em(20)
-      }
-    }
+  &.right .button {
+    float: right;
+    margin-left: em(20)
+  }
+}
