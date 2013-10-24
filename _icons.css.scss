@@ -1,10 +1,4 @@
-/* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
-you can use the generic selector below, but it's slower:
 [class*="icon-"] {
-*/
-.icon-tag, .icon-phone, .icon-screen, .icon-tablet, .icon-bubbles, .icon-spinner, .icon-eye, .icon-mobile, .icon-cog, .icon-list, .icon-arrow-left, .icon-untitled, .icon-lifebuoy, .icon-twitter, .icon-facebook, .icon-vimeo, .icon-login, .icon-logout, .icon-link, .icon-checkmark, .icon-info, .icon-params, .icon-banknote, .icon-t-shirt, .icon-cup, .icon-arrow-right, .icon-arrow-left-2, .icon-cloud-download, .icon-print, .icon-credit-card, .icon-pencil, .icon-arrow-up, .icon-erase, .icon-play {
   font-family: 'sumup-icons';
   speak: none;
   font-style: normal;
@@ -12,107 +6,117 @@ you can use the generic selector below, but it's slower:
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
 .icon-tag:before {
-  content: "\21";
-}
-.icon-phone:before {
-  content: "\22";
-}
-.icon-screen:before {
-  content: "\23";
+  content: "\e600";
 }
 .icon-tablet:before {
-  content: "\24";
+  content: "\e601";
 }
 .icon-bubbles:before {
-  content: "\25";
+  content: "\e602";
 }
 .icon-spinner:before {
-  content: "\26";
+  content: "\e603";
 }
 .icon-eye:before {
-  content: "\27";
-}
-.icon-mobile:before {
-  content: "\28";
-}
-.icon-cog:before {
-  content: "\2a";
-}
-.icon-list:before {
-  content: "\2b";
-}
-.icon-arrow-left:before {
-  content: "\2c";
-}
-.icon-untitled:before {
-  content: "\2d";
-}
-.icon-lifebuoy:before {
-  content: "\2e";
-}
-.icon-twitter:before {
-  content: "\74";
-}
-.icon-facebook:before {
-  content: "\66";
-}
-.icon-vimeo:before {
-  content: "\76";
-}
-.icon-login:before {
-  content: "\32";
-}
-.icon-logout:before {
-  content: "\33";
-}
-.icon-link:before {
-  content: "\34";
-}
-.icon-checkmark:before {
-  content: "\2714";
+  content: "\e604";
 }
 .icon-info:before {
-  content: "\36";
-}
-.icon-params:before {
-  content: "\37";
-}
-.icon-banknote:before {
-  content: "\38";
-}
-.icon-t-shirt:before {
-  content: "\39";
-}
-.icon-cup:before {
-  content: "\3a";
-}
-.icon-arrow-right:before {
-  content: "\3e";
-}
-.icon-arrow-left-2:before {
-  content: "\3c";
+  content: "\e605";
 }
 .icon-cloud-download:before {
-  content: "\3d";
+  content: "\e606";
 }
 .icon-print:before {
-  content: "\70";
+  content: "\e607";
 }
-.icon-credit-card:before {
-  content: "\3f";
-}
-.icon-pencil:before {
-  content: "\40";
-}
-.icon-arrow-up:before {
-  content: "\41";
-}
-.icon-erase:before {
-  content: "\42";
+.icon-credit:before {
+  content: "\e608";
 }
 .icon-play:before {
-  content: "\43";
+  content: "\e609";
+}
+.icon-mobile:before {
+  content: "\e60a";
+}
+.icon-screen:before {
+  content: "\e60b";
+}
+.icon-cog:before {
+  content: "\e60c";
+}
+.icon-list:before {
+  content: "\e60d";
+}
+.icon-arrow-left:before {
+  content: "\e60e";
+}
+.icon-arrow-right:before {
+  content: "\e60f";
+}
+.icon-lifebuoy:before {
+  content: "\e610";
+}
+.icon-twitter:before {
+  content: "\e611";
+}
+.icon-facebook:before {
+  content: "\e612";
+}
+.icon-vimeo:before {
+  content: "\e613";
+}
+.icon-login:before {
+  content: "\e614";
+}
+.icon-logout:before {
+  content: "\e615";
+}
+.icon-link:before {
+  content: "\e616";
+}
+.icon-checkmark:before {
+  content: "\e617";
+}
+.icon-arrow-left-small:before {
+  content: "\e618";
+}
+.icon-arrow-right-small:before {
+  content: "\e619";
+}
+.icon-pencil:before {
+  content: "\e61a";
+}
+.icon-arrow-up-small:before {
+  content: "\e61b";
+}
+.icon-erase:before {
+  content: "\e61c";
+}
+.icon-params:before {
+  content: "\e61d";
+}
+.icon-banknote:before {
+  content: "\e61e";
+}
+.icon-t-shirt:before {
+  content: "\e61f";
+}
+.icon-cup:before {
+  content: "\e620";
+}
+.icon-earth:before {
+  content: "\e621";
+}
+.icon-contract:before {
+  content: "\e622";
+}
+.icon-location:before {
+  content: "\e623";
 }
