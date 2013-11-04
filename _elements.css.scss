@@ -77,9 +77,10 @@ img {
 // Code
 //-------------------------------------
 
-pre {
+pre,
+code {
   background-color: $colorLightGrey;
-  display: inline-block;
   padding: .2em 1em;
   border-radius: $layoutCornerRadius;
+  font-size: em(12);
 }
