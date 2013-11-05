@@ -83,4 +83,5 @@ code {
   padding: .2em 1em;
   border-radius: $layoutCornerRadius;
   font-size: em(12);
+  overflow-x: auto;
 }

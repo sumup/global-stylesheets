@@ -4,8 +4,11 @@
   list-style: none;
 
   & > li {
-    margin-bottom: em(20);
+    @extend %margin-bottom-small;
     position: relative;
+    padding-left: 0;
+
+    &:before { content: "" }
   }
 
   label {
@@ -20,6 +23,10 @@
     color: $colorDarkGrey;
   }
 
+  .checkboxes label {
+    display: inline-block;
+  }
+
   .active label { color: $colorCorpHighlight }
 
   textarea,
@@ -27,35 +34,17 @@
     outline: none;
   }
 
-  .form-help .help-tooltip {
-    left: 70%;
-    top: em(22, 14);
-
-    &.to-left { left: 31% }
-
-    @include media($breakDesktop) {
-      left: 103%;
-
-      &.to-left { left: 103% }
-      &.to-left:before { display: block }
-      &.to-left:after { display: none }
-    }
-  }
-
-  .active .form-help .help-tooltip {
-    @include animation(fadeInRight .3s .1s ease-out backwards);
-    display: block;
-  }
-
-  input,
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
   select {
     @include transition (border-color .2s);
-    @include placeholder {
-      color: $colorLightGrey;
-    }
+
+    @include placeholder { color: $colorLightGrey }
 
     width: 100%;
-    border: 1px solid $colorLightGrey;
+    border: 1px solid;
+    border-color: $colorLightGrey;
     border-radius: $layoutCornerRadius;
     padding: 0.8em 1em;
     font: {
@@ -63,16 +52,12 @@
       weight: 400;
       family: $fontFamilyBody;
     };
-
+    -webkit-appearance: none;
 
     &:focus,
     &:hover {
       border-color: $colorCorpHighlight;
     }
-  }
-
-  input {
-    -webkit-appearance: none;
   }
 
   .select-wrapper {
@@ -126,5 +111,33 @@
   &.right .button {
     float: right;
     margin-left: em(20)
+  }
+}
+
+//-------------------------------------
+// Parsley Errors
+//-------------------------------------
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  &.parsley-success { border-color: $colorSuccess }
+
+  &.parsley-error { border-color: $colorError }
+}
+
+.parsley-error-list {
+  @extend .unstyled;
+  font-size: em(12);
+
+  li {
+    position: relative;
+    top: -1px;
+    padding-top: em(5);
+    padding-left: em(5) !important;
+    border-left: 1px solid $colorError;
+    color: $colorErrorDarker;
+    line-height: 1;
   }
 }
