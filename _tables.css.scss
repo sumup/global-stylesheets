@@ -24,12 +24,13 @@ table {
 
   &.striped {
     thead,
-    tbody {
+    tbody,
+    tfoot {
       td, th {
         padding: .5em;
       }
 
-      tr:nth-child(2n) { background-color: $colorOffWhite }
+      tr:nth-child(2n) td { background-color: $colorOffWhite }
     }
   }
 
