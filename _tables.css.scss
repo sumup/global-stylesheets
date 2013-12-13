@@ -22,6 +22,17 @@ table {
     border-top: 1px solid $colorBorderLight;
   }
 
+  &.unstyled {
+    th, td { padding: 0 .5em 0 0 }
+
+    th {
+      background-color: transparent;
+      color: $colorDarkGrey;
+    }
+
+    td { border-top: none }
+  }
+
   &.striped {
     thead,
     tbody,
@@ -35,6 +46,8 @@ table {
   }
 
   &.condensed {}
+
+
 
   .null { border: none }
 }
