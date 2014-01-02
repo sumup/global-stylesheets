@@ -23,8 +23,10 @@
     color: $colorDarkGrey;
   }
 
-  .checkboxes label {
-    display: inline-block;
+  .checkboxes input {
+    // display: inline-block;
+    float: left;
+    margin-right: .5em;
   }
 
   .active label { color: $colorCorpHighlight }
