@@ -105,3 +105,53 @@ select {
     line-height: 1;
   }
 }
+
+//-------------------------------------
+// Custom radio buttons & checkboxes
+// Note: Wrap inputs and labels in .custom
+//-------------------------------------
+
+.custom {
+
+  label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 15px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-right: 10px;
+      position: absolute;
+      left: 0;
+      background: $colorCorpHighlightLighter;
+    }
+  }
+
+  input[type="radio"], input[type="checkbox"] { display: none; }
+
+  input[type="radio"] + label:before { border-radius: 9px; }
+
+  input[type="checkbox"] + label:before { border-radius: 3px; }
+
+  /* Ticked */
+  input:checked + label:after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    left: 5px;
+    bottom: 9px;
+    background: white;
+  }
+
+  input[type="radio"]:checked + label:after { border-radius: 4px; }
+
+  input[type="checkbox"]:checked + label:after { border-radius: 2px; }
+
+}
