@@ -96,15 +96,28 @@ select {
   font-size: em(12);
 
   li {
+    @include border-bottom-radius($layoutCornerRadius);
     position: relative;
     top: -1px;
-    padding-top: em(5);
-    padding-left: em(5) !important;
-    border-left: 1px solid $colorError;
-    color: $colorErrorDarker;
     line-height: 1;
+    border-left: 1px solid $colorError;
+    border-bottom: 1px solid $colorError;
+    border-right: 1px solid $colorError;
+    background: lighten($colorError, 20%);
+    color: $colorOffWhite;
+    padding: 0.3125em !important;
   }
 }
+
+  .detach {
+    // @extend this to .parsley-error-list when validating checkboxes and radio buttons
+    li {
+      @extend %margin-bottom-medium;
+      @extend %margin-top-small;
+      @include border-top-radius($layoutCornerRadius);
+      border-top: 1px solid $colorError;
+    }
+  }
 
 //-------------------------------------
 // Custom radio buttons & checkboxes
@@ -153,5 +166,15 @@ select {
   input[type="radio"]:checked + label:after { border-radius: 4px; }
 
   input[type="checkbox"]:checked + label:after { border-radius: 2px; }
+
+  &.disabled {
+    label {
+      color: lighten($colorMediumGrey, 25%);
+
+      &:before {
+        background: lighten($colorMediumGrey, 25%);
+      }
+    }
+  }
 
 }
