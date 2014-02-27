@@ -54,7 +54,10 @@
       weight: 400;
       family: $fontFamilyBody;
     };
+
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
     &:focus,
     &:hover {
@@ -137,13 +140,14 @@ select {
     &:before {
       content: "";
       display: inline-block;
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
       margin-right: 10px;
       position: absolute;
       left: 0;
       top: 2px;
-      background: lighten($colorCorpHighlightLighter, 20%);
+      // background: lighten($colorCorpHighlightLighter, 20%);
+      border: 1px solid $colorLightGrey;
     }
   }
 
@@ -172,13 +176,13 @@ select {
   input[type="checkbox"]:checked + label:after {
     content: '\e617';
     font-family: 'sumup-icons';
-    font-size: 12px;
+    font-size: 20px;
     font-weight: normal;
     line-height: 0;
     border-radius: 2px;
-    top: 11px;
-    left: 3px;
-    color: white;
+    top: 8px;
+    left: 1px;
+    color: $colorCorpHighlight;
   }
 
   &.disabled {
