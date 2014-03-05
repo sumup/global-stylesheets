@@ -54,7 +54,10 @@
       weight: 400;
       family: $fontFamilyBody;
     };
+
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
     &:focus,
     &:hover {
@@ -96,15 +99,28 @@ select {
   font-size: em(12);
 
   li {
+    @include border-bottom-radius($layoutCornerRadius);
     position: relative;
     top: -1px;
-    padding-top: em(5);
-    padding-left: em(5) !important;
-    border-left: 1px solid $colorError;
-    color: $colorErrorDarker;
     line-height: 1;
+    border-left: 1px solid $colorError;
+    border-bottom: 1px solid $colorError;
+    border-right: 1px solid $colorError;
+    background: lighten($colorError, 20%);
+    color: $colorOffWhite;
+    padding: 0.3125em !important;
   }
 }
+
+  .detach {
+    // @extend this to .parsley-error-list when validating checkboxes and radio buttons
+    li {
+      @extend %margin-bottom-medium;
+      @extend %margin-top-small;
+      @include border-top-radius($layoutCornerRadius);
+      border-top: 1px solid $colorError;
+    }
+  }
 
 //-------------------------------------
 // Custom radio buttons & checkboxes
@@ -118,17 +134,19 @@ select {
     cursor: pointer;
     position: relative;
     padding-left: 25px;
+    padding-right: 15px;
     margin-right: 15px;
 
     &:before {
       content: "";
       display: inline-block;
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
       margin-right: 10px;
       position: absolute;
       left: 0;
-      background: $colorCorpHighlightLighter;
+      top: 2px;
+      border: 1px solid $colorLightGrey;
     }
   }
 
@@ -140,18 +158,40 @@ select {
 
   /* Ticked */
   input:checked + label:after {
-    content: "";
     display: inline-block;
     width: 8px;
     height: 8px;
     position: absolute;
+  }
+
+  input[type="radio"]:checked + label:after {
+    content: '';
+    border-radius: 4px;
+    top: 7px;
     left: 5px;
-    bottom: 9px;
     background: white;
   }
 
-  input[type="radio"]:checked + label:after { border-radius: 4px; }
+  input[type="checkbox"]:checked + label:after {
+    content: '\e617';
+    font-family: 'sumup-icons';
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 0;
+    border-radius: 2px;
+    top: 8px;
+    left: 1px;
+    color: $colorCorpHighlight;
+  }
 
-  input[type="checkbox"]:checked + label:after { border-radius: 2px; }
+  &.disabled {
+    label {
+      color: lighten($colorMediumGrey, 25%);
+
+      &:before {
+        background: lighten($colorMediumGrey, 25%);
+      }
+    }
+  }
 
 }
