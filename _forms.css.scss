@@ -41,9 +41,8 @@
   input[type="email"],
   input[type="password"] {
     @include transition (border-color .2s);
-
     @include placeholder { color: $colorLightGrey }
-
+    background-color: white;
     width: 100%;
     border: 1px solid;
     border-color: $colorLightGrey;
@@ -147,6 +146,7 @@ select {
       left: 0;
       top: 2px;
       border: 1px solid $colorLightGrey;
+      background-color: white;
     }
   }
 
@@ -154,7 +154,7 @@ select {
 
   input[type="radio"] + label:before { border-radius: 9px; }
 
-  input[type="checkbox"] + label:before { border-radius: 3px; }
+  input[type="checkbox"] + label:before { border-radius: $layoutCornerRadius }
 
   /* Ticked */
   input:checked + label:after {
