@@ -108,35 +108,50 @@
     cursor: default;
   }
 
+  //-------------------------------------
+  // make sure to include 'spinner.svg' in the respective assets directory
+  //
+  // markup:
+  // <button class="has-loading-indicator loading button" type="submit">
+  //   <span class="spinner"></span>
+  //   <span class="label">Login</span>
+  // </button>
+  //-------------------------------------
+
   &.has-loading-indicator {
+    @include transition(all .3s ease-in-out);
     overflow: hidden;
     position: relative;
 
-    .btn-content,
-    .icon-spinner {
-      @include transition(all .15s ease-in-out);
+    .label,
+    .spinner {
+      @include transition(all .3s .2s ease-in-out);
       display: inline-block;
     }
 
-    .btn-content { position: relative }
+    .label {
+      position: relative;
+      top: 0;
+    }
 
-    .icon-spinner {
-      @include animation(rotating .5s linear infinite);
+    .spinner {
+      content: "";
+      background-image: url('/assets/images/spinner.svg');
+      width: 18px;
+      height: 18px;
       position: absolute;
-      font-size: em(18, 13);
-      left: 50%;
       top: -2em;
-      margin: -0.5em 0 0 -0.5em;
+      left: 50%;
+      margin: -9px 0 0 -9px;
     }
 
     &.loading {
-      .btn-content {
-        top: 2em;
-      }
+      background-color: $colorLightGrey;
+      border-color: darken($colorLightGrey, 10%);
 
-      .icon-spinner {
-        top: 50%;
-      }
+      .label { top: 2em }
+
+      .spinner { top: 50% }
     }
   }
 }
