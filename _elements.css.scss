@@ -73,6 +73,28 @@ img {
   max-width: 100%;
 }
 
+figure {}
+
+figcaption {
+  font-size: em(12);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $colorMediumGrey;
+  padding-left: 2em;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 1.5em;
+    height: 1px;
+    background-color: $colorCorpHighlight;
+    position: absolute;
+    top: .8em;
+    left: 0;
+  }
+}
+
 //-------------------------------------
 // Code
 //-------------------------------------
