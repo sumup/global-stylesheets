@@ -93,7 +93,7 @@ select {
   &.parsley-error { border-color: $colorError }
 }
 
-.parsley-error-list {
+.parsley-errors-list {
   @extend .unstyled;
   font-size: em(12);
 
