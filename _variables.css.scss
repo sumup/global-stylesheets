@@ -6,6 +6,8 @@
 $colorCorpHighlight: #00a5df;  // Pantone 2202C
 $colorCorpHighlightLighter: #13c2ff; // for hovers and stuff
 $colorCorpHighlightDarker: #008bbb; // for borders etc
+$colorGold: #f9bb4d;
+
 
 $colorOffWhite: #f7f7f7;
 $colorLightGrey: #e5e5e5; // Pantone Cool Gray 1C
@@ -15,12 +17,12 @@ $colorBorderLight: shade($colorLightGrey, 5%);
 $colorBorderDark: shade($colorDarkGrey, 10%);
 
 // feedback colors
-$colorSuccess: #85fb6f;
-$colorSuccessDarker: #0cd419;
-$colorWarning: #FFBB33;
-$colorWarningDarker: #FF8800;
-$colorError: #FF4444;
-$colorErrorDarker: #CC0000;
+$colorSuccess: #00EC6F;
+$colorSuccessDarker: #00C454;
+$colorWarning: #FBBA20;
+$colorWarningDarker: #E59D0E;
+$colorError: #FF4343;
+$colorErrorDarker: #DD312F;
 
 //-------------------------------------
 // Layout vars
