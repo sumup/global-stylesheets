@@ -39,11 +39,11 @@
 
   input[type="text"],
   input[type="email"],
-  input[type="password"] {
+  input[type="password"],
+  input[type="tel"] {
     @include transition (border-color .2s);
-
     @include placeholder { color: $colorLightGrey }
-
+    background-color: white;
     width: 100%;
     border: 1px solid;
     border-color: $colorLightGrey;
@@ -54,7 +54,10 @@
       weight: 400;
       family: $fontFamilyBody;
     };
+
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
     &:focus,
     &:hover {
@@ -91,7 +94,7 @@ select {
   &.parsley-error { border-color: $colorError }
 }
 
-.parsley-error-list {
+.parsley-errors-list {
   @extend .unstyled;
   font-size: em(12);
 
@@ -103,7 +106,7 @@ select {
     border-left: 1px solid $colorError;
     border-bottom: 1px solid $colorError;
     border-right: 1px solid $colorError;
-    background: lighten($colorError, 20%);
+    background: $colorError;
     color: $colorOffWhite;
     padding: 0.3125em !important;
   }
@@ -137,13 +140,14 @@ select {
     &:before {
       content: "";
       display: inline-block;
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
       margin-right: 10px;
       position: absolute;
       left: 0;
       top: 2px;
-      background: lighten($colorCorpHighlightLighter, 20%);
+      border: 1px solid $colorLightGrey;
+      background-color: white;
     }
   }
 
@@ -151,7 +155,7 @@ select {
 
   input[type="radio"] + label:before { border-radius: 9px; }
 
-  input[type="checkbox"] + label:before { border-radius: 3px; }
+  input[type="checkbox"] + label:before { border-radius: $layoutCornerRadius }
 
   /* Ticked */
   input:checked + label:after {
@@ -172,13 +176,13 @@ select {
   input[type="checkbox"]:checked + label:after {
     content: '\e617';
     font-family: 'sumup-icons';
-    font-size: 12px;
+    font-size: 20px;
     font-weight: normal;
     line-height: 0;
     border-radius: 2px;
-    top: 11px;
-    left: 3px;
-    color: white;
+    top: 8px;
+    left: 1px;
+    color: $colorCorpHighlight;
   }
 
   &.disabled {
