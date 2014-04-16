@@ -78,6 +78,11 @@
     &.blue {
       color: $colorCorpHighlight;
       border-color: $colorCorpHighlight;
+
+      &:hover, &:focus, &:active {
+        color: $colorOffWhite;
+        background: $colorCorpHighlight;
+      }
     }
   }
 
