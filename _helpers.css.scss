@@ -18,15 +18,15 @@
   vertical-align: middle;
 }
 
-.visuallyhidden { 
-  position: absolute; 
-  overflow: hidden; 
-  clip: rect(0 0 0 0); 
-  height: 1px; 
-  width: 1px; 
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
   margin: -1px;
   padding: 0;
-  border: 0; 
+  border: 0;
 }
 
 // add-on mixin for NEAT
@@ -69,13 +69,8 @@
   color: $colorCorpHighlight;
 }
 
+//-------------------------------------
+// Animation flickering fix
+//-------------------------------------
 
-//-------------------------------------
-// Debug stuff
-//-------------------------------------
-@mixin no-flick {
-  // -webkit-perspective: 1000;
-  -webkit-backface-visibility: hidden;
-  // -webkit-transform-style: preserve-3d;
-  // -webkit-transform: translate3d(0,0,0);
-}
+* { @include backface-visibility(hidden) }
