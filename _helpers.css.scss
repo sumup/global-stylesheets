@@ -73,4 +73,7 @@
 // Animation flickering fix
 //-------------------------------------
 
-* { @include backface-visibility(hidden) }
+@mixin no-flick { -webkit-backface-visibility: hidden }
+// TODO: seems to break some other things...
+//
+// * { @include backface-visibility(hidden) }
