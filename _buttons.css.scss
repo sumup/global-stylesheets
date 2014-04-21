@@ -72,7 +72,8 @@
   &.outline {
     text-shadow: none;
     background-color: transparent;
-    border: 2px solid;
+    border: 1px solid;
+    font-weight: 100;
     border-color: $colorBorderLight;
 
     &.blue {
@@ -82,6 +83,16 @@
       &:hover, &:focus, &:active {
         color: $colorOffWhite;
         background: $colorCorpHighlight;
+      }
+    }
+
+    &.green {
+      color: $colorSuccessDarker;
+      border-color: $colorSuccessDarker;
+
+      &:hover, &:focus, &:active {
+        color: $colorOffWhite;
+        background: $colorSuccessDarker;
       }
     }
   }
