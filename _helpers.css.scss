@@ -35,6 +35,20 @@
   &:nth-child(#{$nth}+1) { clear: none }
 }
 
+// aligns relative elements vertical centered,
+// but wait: even if the height is unknown, awesome!
+%vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.vertical-align {
+  @extend %vertical-align;
+}
+
 //-------------------------------------
 // Margins
 //-------------------------------------
