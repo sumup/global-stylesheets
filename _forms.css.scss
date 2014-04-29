@@ -32,17 +32,13 @@
 
   .active label { color: $colorCorpHighlight }
 
-  textarea,
-  input {
-    outline: none;
-  }
-
   input[type="text"],
   input[type="email"],
   input[type="password"],
-  input[type="tel"] {
+  textarea {
     @include transition (border-color .2s);
     @include placeholder { color: $colorLightGrey }
+    outline: none;
     background-color: white;
     width: 100%;
     border: 1px solid;
@@ -64,6 +60,8 @@
       border-color: $colorCorpHighlight;
     }
   }
+
+  textarea { min-height: 200px }
 }
 
 .button-set {
@@ -106,7 +104,7 @@ select {
     border-left: 1px solid $colorError;
     border-bottom: 1px solid $colorError;
     border-right: 1px solid $colorError;
-    background: $colorError;
+    background: lighten($colorError, 20%);
     color: $colorOffWhite;
     padding: 0.3125em !important;
   }
