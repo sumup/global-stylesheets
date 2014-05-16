@@ -108,12 +108,16 @@
     font-size: 1.1em;
   }
 
+  &.large {
+    padding: 1em 1.5em;
+  }
+
   &.call-to-action {
-    padding: 0.6em 1em;
+    @extend .large;
 
     @include media($breakTabletPortrait) {
-      font-size: 1.2em;
-      min-width: 250px;
+      // font-size: 1.2em;
+      // min-width: 250px;
     }
   }
 
