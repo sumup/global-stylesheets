@@ -105,7 +105,7 @@ select {
     border-left: 1px solid $colorError;
     border-bottom: 1px solid $colorError;
     border-right: 1px solid $colorError;
-    background: lighten($colorError, 20%);
+    background: lighten($colorError, 20%) !important;
     color: $colorOffWhite;
     padding: 0.3125em !important;
   }
