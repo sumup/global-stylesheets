@@ -33,6 +33,8 @@
     background-color: $colorCorpHighlightLighter;
   }
 
+  &:focus { outline: none } // fixing glowing buttons on webkit
+
   &.grey {
     color: $colorDarkGrey;
     background-color: $colorLightGrey;
