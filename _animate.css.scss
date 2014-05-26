@@ -24,7 +24,11 @@
     }
 }
 
-
+@include keyframes(fadeOut) {
+    100% {
+        opacity: 0;
+    }
+}
 
 
 @include keyframes (rotating) {
