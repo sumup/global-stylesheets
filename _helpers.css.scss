@@ -91,3 +91,10 @@
 // TODO: seems to break some other things...
 //
 // * { @include backface-visibility(hidden) }
+
+
+//-------------------------------------
+// Print media query
+//-------------------------------------
+
+@mixin print { @media print { @content; } }
