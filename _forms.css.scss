@@ -37,7 +37,7 @@
   input[type="tel"],
   textarea {
     @include transition (border-color .2s);
-    @include placeholder { color: $colorLightGrey }
+    @include placeholder { color: $colorLightGrey };
     outline: none;
     background-color: white;
     width: 100%;
@@ -117,6 +117,7 @@
 input[type="text"],
 input[type="email"],
 input[type="password"],
+input[type="tel"],
 select {
   &.parsley-success { border-color: $colorSuccess }
 
