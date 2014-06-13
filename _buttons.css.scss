@@ -110,7 +110,7 @@
     font-size: 1.1em;
   }
 
-  &.large { @include media($breakTabletLandscape) { padding: 1em 1.5em } }
+  // &.large { @include media($breakTabletLandscape) { padding: 1em 1.5em } }
 
   &.call-to-action {
     @extend .large;
