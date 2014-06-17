@@ -77,9 +77,13 @@
       padding: em(3) 1em;
       display: none;
       position: absolute;
-      top: -25px;
+      top: -20px;
       color: $colorOffWhite;
       z-index: 1;
+
+      @include media($breakTabletPortrait) {
+        top: -25px;
+      }
     }
 
     li { z-index: 3 }
