@@ -33,6 +33,8 @@
     background-color: $colorCorpHighlightLighter;
   }
 
+  &:focus { outline: none } // fixing glowing buttons on webkit
+
   &.grey {
     color: $colorDarkGrey;
     background-color: $colorLightGrey;
@@ -108,14 +110,16 @@
     font-size: 1.1em;
   }
 
-  &.call-to-action {
-    padding: 1.2em 2em;
+  // // &.large { @include media($breakTabletLandscape) { padding: 1em 1.5em } }
 
-    @include media($breakTabletPortrait) {
-      font-size: 1.2em;
-      min-width: 250px;
-    }
-  }
+  // &.call-to-action {
+  //   @extend .large;
+
+  //   @include media($breakTabletPortrait) {
+  //     // font-size: 1.2em;
+  //     // min-width: 250px;
+  //   }
+  // }
 
   /* states */
 

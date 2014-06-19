@@ -23,45 +23,78 @@
     color: $colorDarkGrey;
   }
 
+  .active label { color: $colorCorpHighlight }
+
   .checkboxes input {
-    // display: inline-block;
     float: left;
     margin-right: .5em;
     margin-top: .15em;
   }
 
-  .active label { color: $colorCorpHighlight }
-
-  textarea,
-  input {
-    outline: none;
-  }
-
   input[type="text"],
   input[type="email"],
   input[type="password"],
-  input[type="tel"] {
+  input[type="tel"],
+  textarea {
     @include transition (border-color .2s);
-    @include placeholder { color: $colorLightGrey }
+    @include placeholder { color: $colorLightGrey };
+    outline: none;
     background-color: white;
     width: 100%;
     border: 1px solid;
     border-color: $colorLightGrey;
     border-radius: $layoutCornerRadius;
     padding: 0.8em 1em;
-    font: {
-      size: em(16, 14);
-      weight: 400;
-      family: $fontFamilyBody;
-    };
 
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 
     &:focus,
-    &:hover {
-      border-color: $colorCorpHighlight;
+    &:hover { border-color: $colorCorpHighlight }
+  }
+
+  textarea { min-height: 200px }
+
+  // smaller form inputs
+  &.small {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    textarea {
+      padding: .4em .5em;
+    }
+  }
+
+  // hinting labels
+  &.hinting-labels {
+    label.hint {
+      border-top-left-radius: $layoutCornerRadius;
+      border-top-right-radius: $layoutCornerRadius;
+      background-color: $colorCorpHighlight;
+      box-shadow: 0 -2px 0 rgba($colorCorpHighlight, .2);
+      padding: em(3) 1em;
+      display: none;
+      position: absolute;
+      top: -20px;
+      color: $colorOffWhite;
+      z-index: 1;
+
+      @include media($breakTabletPortrait) {
+        top: -25px;
+      }
+    }
+
+    li { z-index: 3 }
+
+    li, input { position: relative }
+
+    input { z-index: 2 }
+
+    input:focus ~ label {
+      @include animation(fadeInUp .2s 0s backwards);
+      display: block;
     }
   }
 }
@@ -88,6 +121,7 @@
 input[type="text"],
 input[type="email"],
 input[type="password"],
+input[type="tel"],
 select {
   &.parsley-success { border-color: $colorSuccess }
 
@@ -106,7 +140,7 @@ select {
     border-left: 1px solid $colorError;
     border-bottom: 1px solid $colorError;
     border-right: 1px solid $colorError;
-    background: $colorError;
+    background: lighten($colorError, 20%);
     color: $colorOffWhite;
     padding: 0.3125em !important;
   }
