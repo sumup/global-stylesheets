@@ -5,21 +5,11 @@ table {
 
   td, th {
     padding: .5em 1em .5em 0;
-
-    // &:first-child { padding-left: 1em }
+    border-top: 1px solid $colorBorderLight;
   }
 
   th {
-    background-color: $colorDarkGrey;
-    color: $colorOffWhite;
-    font-weight: 500;
-
-    &:first-child { border-radius: $layoutCornerRadius 0 0 0 }
-    &:last-child { border-radius: 0 $layoutCornerRadius 0 0 }
-  }
-
-  td {
-    border-top: 1px solid $colorBorderLight;
+    font-weight: 300;
   }
 
   &.unstyled {
@@ -46,8 +36,6 @@ table {
   }
 
   &.condensed {}
-
-
 
   .null { border: none }
 }
