@@ -57,6 +57,17 @@
     }
   }
 
+  &.green {
+    color: $colorOffWhite;
+    background-color: $colorSuccessDarker;
+    border-bottom-color: shade($colorSuccessDarker, 5%);
+    text-shadow: none;
+
+    &:hover {
+      background-color: lighten($colorSuccessDarker, 5%);
+    }
+  }
+
   &.white {
     color: $colorDarkGrey;
     background-color: $colorOffWhite;
