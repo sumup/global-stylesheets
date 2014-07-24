@@ -4,12 +4,29 @@ table {
   text-align: left;
 
   td, th {
-    padding: .5em 1em .5em 0;
+    padding: 1em 10px;
+    line-height: 1;
     border-top: 1px solid $colorBorderLight;
+    white-space: nowrap;
   }
 
-  th {
-    font-weight: 300;
+  thead th {
+    font-weight: 500;
+    color: white;
+    background-color: $colorMediumGrey;
+
+    &:first-child {
+      padding-left: 10px;
+      border-top-left-radius: $layoutCornerRadius;
+    }
+
+    &:last-child {
+     border-top-right-radius: $layoutCornerRadius;
+    }
+  }
+
+  tbody tr:first-child td {
+    border-top: none;
   }
 
   &.unstyled {
@@ -27,10 +44,6 @@ table {
     thead,
     tbody,
     tfoot {
-      td, th {
-        padding: .5em;
-      }
-
       tr:nth-child(2n) td { background-color: $colorOffWhite }
     }
   }
