@@ -15,12 +15,12 @@ table {
     color: white;
     background-color: $colorMediumGrey;
 
-    &:first-child {
+    &:first-of-type {
       padding-left: 10px;
       border-top-left-radius: $layoutCornerRadius;
     }
 
-    &:last-child {
+    &:last-of-type {
      border-top-right-radius: $layoutCornerRadius;
     }
   }
