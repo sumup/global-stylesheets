@@ -18,10 +18,12 @@ table {
     &:first-of-type {
       padding-left: 10px;
       border-top-left-radius: $layoutCornerRadius;
+      border-bottom-left-radius: $layoutCornerRadius;
     }
 
     &:last-of-type {
      border-top-right-radius: $layoutCornerRadius;
+     border-bottom-right-radius: $layoutCornerRadius;
     }
   }
 
