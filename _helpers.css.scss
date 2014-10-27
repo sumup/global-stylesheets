@@ -32,7 +32,10 @@
 // add-on mixin for NEAT
 @mixin omega-reset($nth) {
   &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
-  &:nth-child(#{$nth}+1) { clear: none }
+
+  $nthplusone: $nth + 1;
+
+  &:nth-child(#{$nthplusone}) { clear: none }
 }
 
 // aligns relative elements vertical centered,
