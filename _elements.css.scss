@@ -37,7 +37,9 @@ ul {
   &.styled {
     &.checkmark li:before {
       content: '\2714';
-      top: 50%;
+      top: .65em;
+      left: 0;
+      font-size: 12px;
       margin-top: -0.7em;
       color: $colorCorpHighlight;
       text-shadow: 0 1px 0 rgba(black, .3);
@@ -79,12 +81,14 @@ img {
 figure {}
 
 figcaption {
-  font-size: em(12);
-  font-weight: 500;
-  text-transform: uppercase;
-  color: $colorMediumGrey;
-  padding-left: 2em;
-  position: relative;
+  font-size: 1em;
+  font-weight: 100;
+  text-transform: none;
+  color: $colorDarkGrey;
+  padding-left: 0;
+  position: static;
+
+  strong { color: $colorCorpHighlight }
 
   &:before {
     content: "";
@@ -109,4 +113,19 @@ code {
   border-radius: $layoutCornerRadius;
   font-size: em(12);
   overflow-x: auto;
+}
+
+//-------------------------------------
+// Borders
+//-------------------------------------
+
+.bottom-line {
+  @extend small;
+  text-transform: none;
+  color: $colorLightGrey;
+  display: block;
+  margin-top: .75em;
+  text-align: center;
+
+  @include media($breakDesktop) { text-align: left }
 }

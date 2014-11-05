@@ -7,14 +7,6 @@ $colorCorpHighlight: #00a5df;  // Pantone 2202C
 $colorCorpHighlightLighter: #13c2ff; // for hovers and stuff
 $colorCorpHighlightDarker: #008bbb; // for borders etc
 
-
-$colorOffWhite: #f7f7f7;
-$colorLightGrey: #e5e5e5; // Pantone Cool Gray 1C
-$colorMediumGrey: #898989;
-$colorDarkGrey: #47494d; // Pantone Cool Gray 11C
-$colorBorderLight: shade($colorLightGrey, 5%);
-$colorBorderDark: shade($colorDarkGrey, 10%);
-
 // feedback colors
 $colorSuccess: #3EEC91;
 $colorSuccessDarker: #35C97C;
@@ -22,6 +14,19 @@ $colorWarning: #F3C667;
 $colorWarningDarker: #EAB157;
 $colorError: #FF646A;
 $colorErrorDarker: #DB565B;
+
+// layout colors
+$colorCorpSecondary: $colorSuccessDarker;
+$colorOffWhite: #f7f7f7;
+$colorLightGrey: #e5e5e5; // Pantone Cool Gray 1C
+$colorMediumGrey: #898989;
+$colorDarkGrey: #47494d; // Pantone Cool Gray 11C
+$colorBorderLight: shade($colorLightGrey, 5%);
+$colorBorderDark: shade($colorDarkGrey, 10%);
+$colorSoftOverlay:      rgba(darken($colorCorpHighlight, 30%), .5);
+$colorDarkOverlay:      rgba(darken($colorCorpHighlight, 20%), .9);
+$colorDarkerOverlay:    rgba(darken($colorCorpHighlight, 30%), .9);
+
 
 //-------------------------------------
 // Layout vars

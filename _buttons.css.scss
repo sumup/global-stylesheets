@@ -10,15 +10,13 @@
 
 .button {
   @include transition(all 0.2s ease-in-out);
+  text-transform: uppercase;
   text-shadow: 0 1px 0px rgba(black, .2) ;
   text-align: center;
   white-space: nowrap;
   border: none;
   border-radius: $layoutCornerRadius;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: $colorCorpHighlightDarker;
-  padding: 0.8em 1em;
+  padding: 1.1em 1.6em;
   background-color: $colorCorpHighlight;
   color: white;
   text-decoration: none;
@@ -34,6 +32,13 @@
   }
 
   &:focus { outline: none } // fixing glowing buttons on webkit
+
+  /* Colors */
+
+  &.blue {
+    border-color: $colorCorpHighlight;
+    color: $colorCorpHighlight;
+  }
 
   &.grey {
     color: $colorDarkGrey;
@@ -84,10 +89,11 @@
 
   &.outline {
     text-shadow: none;
-    background-color: transparent;
+    background-color: transparent !important;
     border: 1px solid;
-    font-weight: 100;
+    font-weight: 300;
     border-color: $colorBorderLight;
+    color: $colorMediumGrey;
 
     &.blue {
       color: $colorCorpHighlight;
@@ -95,7 +101,7 @@
 
       &:hover, &:focus, &:active {
         color: $colorOffWhite;
-        background: $colorCorpHighlight;
+        background: $colorCorpHighlight !important;
       }
     }
 
@@ -105,12 +111,18 @@
 
       &:hover, &:focus, &:active {
         color: $colorOffWhite;
-        background: $colorSuccessDarker;
+        background-color: rgba($colorLightGrey, .2);
       }
     }
   }
 
   /* sizes */
+
+  &.mini {
+    @extend small;
+    padding: .75em 1em;
+    color: $colorLightGrey;
+  }
 
   &.small {
     font-size: em(13, 16);
@@ -121,16 +133,25 @@
     font-size: 1.1em;
   }
 
-  // // &.large { @include media($breakTabletLandscape) { padding: 1em 1.5em } }
+  &.call-to-action {
+    display: block;
+    background-color: $colorCorpSecondary;
 
-  // &.call-to-action {
-  //   @extend .large;
+    @include media($breakDesktop) { display: inline-block }
 
-  //   @include media($breakTabletPortrait) {
-  //     // font-size: 1.2em;
-  //     // min-width: 250px;
-  //   }
-  // }
+    &:hover, &:active, &:focus {
+      background-color: darken($colorCorpSecondary, 5%);
+    }
+
+    &.secondary {
+      background-color: $colorCorpHighlight;
+      color: $colorOffWhite;
+
+      &:hover, &:active, &:focus {
+        background-color: darken($colorCorpHighlight, 5%);
+      }
+    }
+  }
 
   /* states */
 
@@ -246,6 +267,8 @@
     }
   }
 }
+
+.inactive { cursor: default }
 
 .tag {
   @include transition(all 0.2s ease-in-out);
