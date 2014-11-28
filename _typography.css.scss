@@ -55,14 +55,10 @@ h1 {
 
 h2 {
   font-size: 1.6em;
-
-  // @include media($breakTabletPortrait) { font-size: em(26) }
-  // @include media($breakDesktop) { font-size: 2em }
 }
 
 h3 {
-  color: $colorCorpHighlight;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 300;
 }
 
