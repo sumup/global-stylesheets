@@ -10,6 +10,7 @@
 
 .button {
   @include transition(all 0.2s ease-in-out);
+  position: relative;
   text-transform: uppercase;
   text-shadow: 0 1px 0px rgba(black, .2) ;
   text-align: center;
@@ -25,6 +26,7 @@
   font-weight: 500;
   font-family: $fontFamilyDisplay;
   line-height: 1em;
+  cursor: pointer; // Needed for href-less links
 
   &:hover {
     color: white;
@@ -114,6 +116,29 @@
         background-color: rgba($colorLightGrey, .2);
       }
     }
+  }
+
+  /* Loading spinner */
+
+  .spinner {
+    @include size(18px);
+    @include transition(all .3s .2s ease-in-out);
+    background: url('/images/spinner-bright.svg') no-repeat center center;
+    display: none;
+    position: absolute;
+    right: .8em;
+    top: .9em;
+  }
+
+  /*
+   * Apply .loading to parent button to enable spinner
+   */ 
+  
+  &.loading { 
+    @include transition(padding .2s ease-in-out);
+    padding-right: 2.5em !important;
+
+    .spinner { display: inline-block }
   }
 
   /* sizes */
