@@ -115,7 +115,7 @@
 }
 
 //-------------------------------------
-// Parsley Errors
+// Input errors and validation
 //-------------------------------------
 
 input[type="text"],
@@ -123,12 +123,19 @@ input[type="email"],
 input[type="password"],
 input[type="tel"],
 select {
-  &.parsley-success { border-color: $colorSuccess }
+  &.parsley-success,
+  &.ng-valid {
+    border-color: $colorSuccess;
+  }
 
-  &.parsley-error { border-color: $colorError }
+  &.parsley-error,
+  &.ng-invalid {
+    border-color: $colorError;
+  }
 }
 
-.parsley-errors-list {
+.parsley-errors-list,
+.validation-list {
   @extend .unstyled;
   font-size: em(12);
 
@@ -146,15 +153,15 @@ select {
   }
 }
 
-  .detach {
-    // @extend this to .parsley-error-list when validating checkboxes and radio buttons
-    li {
-      @extend %margin-bottom-medium;
-      @extend %margin-top-small;
-      @include border-top-radius($layoutCornerRadius);
-      border-top: 1px solid $colorError;
-    }
+.detach {
+  // @extend this to .parsley-error-list when validating checkboxes and radio buttons
+  li {
+    @extend %margin-bottom-medium;
+    @extend %margin-top-small;
+    @include border-top-radius($layoutCornerRadius);
+    border-top: 1px solid $colorError;
   }
+}
 
 //-------------------------------------
 // Custom radio buttons & checkboxes
