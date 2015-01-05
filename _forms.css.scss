@@ -1,3 +1,7 @@
+//-------------------------------------
+// Default form list styles
+//-------------------------------------
+
 .form-list {
   padding: 0;
   margin: 0;
@@ -99,14 +103,15 @@
   }
 }
 
+//-------------------------------------
+// Button group
+//-------------------------------------
+
 .button-set {
   @include clearfix;
   margin-top: em(30);
 
-  p {
-    // @include span-columns(5 of 9);
-    margin-top: 0;
-  }
+  p { margin-top: 0 }
 
   &.right .button {
     float: right;
@@ -198,7 +203,7 @@ select {
 
   input[type="checkbox"] + label:before { border-radius: $layoutCornerRadius }
 
-  /* Ticked */
+  /* Ticked styles */
   input:checked + label:after {
     display: inline-block;
     width: 8px;
@@ -226,6 +231,7 @@ select {
     color: $colorCorpHighlight;
   }
 
+  /* Disabled styles */
   &.disabled {
     label {
       color: lighten($colorMediumGrey, 25%);
@@ -236,4 +242,48 @@ select {
     }
   }
 
+<<<<<<< Updated upstream
+=======
+  /*
+  * Custom drop-downs need a .select
+  * wrapper to support pseudo-elements
+  * e.g.:
+  * <li class="custom select">
+  *   <select></select>
+  * </li>
+  */
+  &.select {
+    position: relative;
+
+    &:after {
+      content: '▴';
+      @include size(1em);
+      @include transform(rotate(180deg));
+      @include transition;
+      display: block;
+      position: absolute;
+      right: 1em;
+      top: .9em;
+      color: $colorMediumGrey;
+    }
+
+    select {
+      @include appearance(none);
+      width: 100%;
+      background: none;
+      border: 1px solid $colorBorderLight;
+      border-radius: $layoutCornerRadius;
+      padding: 7px 15px;
+      white-space: nowrap;
+      cursor: pointer;
+
+      &:active {
+        &:after {
+          @include transform(rotate(0deg));
+          @include transition;
+        }
+      }
+    }
+  }
+>>>>>>> Stashed changes
 }
