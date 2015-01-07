@@ -28,6 +28,14 @@
   line-height: 1em;
   cursor: pointer; // Needed for href-less links
 
+  /* SVG icons inside buttons */
+
+  .icon {
+    @include size(22px);
+    fill: white;
+    margin: -8px 0 -4px -3px;
+  }
+
   &:hover {
     color: white;
     background-color: $colorCorpHighlightLighter;
@@ -51,6 +59,8 @@
     &:hover {
       background-color: lighten($colorLightGrey, 5%);
     }
+
+    .icon { fill: $colorDarkGrey }
   }
 
   &.dark {
