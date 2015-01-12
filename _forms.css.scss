@@ -161,9 +161,11 @@ select {
     border-left: 1px solid $colorError;
     border-bottom: 1px solid $colorError;
     border-right: 1px solid $colorError;
-    background: lighten($colorError, 20%);
+    background: $colorError;
     color: $colorOffWhite;
-    padding: 0.3125em !important;
+    padding: .5em 1em !important;
+
+    p { margin: 0 }
   }
 }
 
@@ -187,12 +189,9 @@ select {
     li {
       @include border-top-radius($layoutCornerRadius);
       border-top: 1px solid $colorError;
-      color: darken($colorError, 40%);
 
       &:nth-child(2) { @extend %margin-top-small }
     }
-
-    p { margin: .5em 1em }
   }
 }
 
