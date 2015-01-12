@@ -167,13 +167,30 @@ select {
   }
 }
 
+/**
+ * @extend this when validating checkboxes
+ * and radio buttons, or when applying validation
+ * errors not bound to any specific input
+ */
+
 .detach {
-  // @extend this to .parsley-error-list when validating checkboxes and radio buttons
-  li {
-    @extend %margin-bottom-medium;
-    @extend %margin-top-small;
-    @include border-top-radius($layoutCornerRadius);
-    border-top: 1px solid $colorError;
+  &.parsley-errors-list {
+    li {
+      @extend %margin-bottom-medium;
+      @extend %margin-top-small;
+      @include border-top-radius($layoutCornerRadius);
+      border-top: 1px solid $colorError;
+    }
+  }
+
+  &.validation-list {
+    li {
+      @include border-top-radius($layoutCornerRadius);
+      border-top: 1px solid $colorError;
+      color: darken($colorError, 40%);
+    }
+
+    p { margin: .5em 1em }
   }
 }
 
