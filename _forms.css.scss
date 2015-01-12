@@ -188,6 +188,8 @@ select {
       @include border-top-radius($layoutCornerRadius);
       border-top: 1px solid $colorError;
       color: darken($colorError, 40%);
+
+      &:nth-child(2) { @extend %margin-top-small }
     }
 
     p { margin: .5em 1em }
