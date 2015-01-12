@@ -129,12 +129,12 @@ input[type="password"],
 input[type="tel"],
 select {
   &.parsley-success,
-  &.ng-valid {
+  &.ng-valid.ng-dirty {
     border-color: $colorSuccess;
   }
 
   &.parsley-error,
-  &.ng-invalid {
+  &.ng-invalid.ng-dirty {
     border-color: $colorError;
   }
 }
