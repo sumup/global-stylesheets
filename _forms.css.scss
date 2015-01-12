@@ -139,6 +139,15 @@ select {
   }
 }
 
+/**
+ * Styled error messages
+ * should look like this:
+ * 
+ * <ul class="validation-list">
+ *  <li>Error</li>
+ * </ul>
+ */
+
 .parsley-errors-list,
 .validation-list {
   @extend .unstyled;
