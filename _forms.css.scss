@@ -40,6 +40,7 @@ ul.form-list {
   input[type="password"],
   input[type="tel"],
   textarea {
+    @include appearance(none);
     @include transition (border-color .2s);
     @include placeholder { color: $colorLightGrey };
     outline: none;
@@ -49,10 +50,6 @@ ul.form-list {
     border-color: $colorLightGrey;
     border-radius: $layoutCornerRadius;
     padding: 0.8em 1em;
-
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
 
     &:focus,
     &:hover { border-color: $colorCorpHighlight }
@@ -288,17 +285,17 @@ select {
       display: block;
       position: absolute;
       right: 1em;
-      top: .9em;
+      top: 1.1em;
       color: $colorMediumGrey;
     }
 
     select {
       @include appearance(none);
+      padding: 0.8em 1em;
       width: 100%;
       background: none;
       border: 1px solid $colorBorderLight;
       border-radius: $layoutCornerRadius;
-      padding: 7px 15px;
       white-space: nowrap;
       cursor: pointer;
 
