@@ -11,7 +11,6 @@
 .button {
   @include transition(all 0.2s ease-in-out);
   position: relative;
-  text-transform: uppercase;
   text-shadow: 0 1px 0px rgba(black, .2) ;
   text-align: center;
   white-space: nowrap;
