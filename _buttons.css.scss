@@ -101,7 +101,7 @@
 
   &.outline {
     text-shadow: none;
-    background-color: transparent !important;
+    background-color: transparent;
     border: 1px solid;
     font-weight: 300;
     border-color: $colorBorderLight;
@@ -113,7 +113,7 @@
 
       &:hover, &:focus, &:active {
         color: $colorOffWhite;
-        background: $colorCorpHighlight !important;
+        background: $colorCorpHighlight;
       }
     }
 
