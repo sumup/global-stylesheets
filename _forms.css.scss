@@ -243,9 +243,9 @@ select {
   input[type="radio"]:checked + label:after {
     content: '';
     border-radius: 4px;
-    top: 7px;
-    left: 5px;
-    background: white;
+    top: 6px;
+    left: 4px;
+    background: $colorCorpHighlight;
   }
 
   input[type="checkbox"]:checked + label:after {
