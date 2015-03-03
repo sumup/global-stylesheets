@@ -24,6 +24,8 @@ $fg-gutter: $gutter;
 // breakpoints
 $breakPhonePortrait: new-breakpoint(min-width 321px);
 $breakTabletPortrait: new-breakpoint(min-width 481px);
+$breakTabletPortraitAfter: new-breakpoint(min-width 531px);
 $breakTabletLandscape: new-breakpoint(min-width 769px);
+$breakTabletLandscapeAfter: new-breakpoint(min-width 819px);
 $breakDesktop: new-breakpoint(min-width 1025px);
 $breakLargescreen: new-breakpoint(min-width 1441px);
