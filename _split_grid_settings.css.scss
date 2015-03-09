@@ -1,0 +1,28 @@
+$max-width: 1024px;
+
+// ------------------------------------------------------------
+// Overrides for Neat
+// ------------------------------------------------------------
+
+$column: golden-ratio(1em, 3) !default;
+$gutter: golden-ratio(1em, 3) !default;
+$fg-column: $column;
+$fg-gutter: $gutter;
+
+// ------------------------------------------------------------
+// Main breakpoints
+// ------------------------------------------------------------
+
+$breakPhonePortrait: new-breakpoint(min-width 321px);
+$breakTabletPortrait: new-breakpoint(min-width 481px);
+$breakTabletLandscape: new-breakpoint(min-width 769px);
+$breakDesktop: new-breakpoint(min-width 1025px);
+$breakLargescreen: new-breakpoint(min-width 1441px);
+
+// ------------------------------------------------------------
+// Secondary breakpoints
+// ------------------------------------------------------------
+
+$breakTabletPortraitAfter: new-breakpoint(min-width 531px);
+$breakTabletLandscapeAfter: new-breakpoint(min-width 819px);
+$breakDesktopAfter: new-breakpoint(min-width 1075px);

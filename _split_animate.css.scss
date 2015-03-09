@@ -1,0 +1,25 @@
+//-------------------------------------
+// Animation
+//-------------------------------------
+
+@include keyframes(slideDown) {
+  0% { @include transform(translateY(.35em)); }
+  50% { @include transform(translateY(-.35em)); }
+  100% { @include transform(translateY(.35em)); }
+}
+
+@include keyframes(slideOut-right) {
+  0% { @include transform(translateX(0%)); }
+  100% {
+    @include transform(translateX(100%));
+    display: none;
+  }
+}
+
+@include keyframes(slideOut-left) {
+  0% { @include transform(translateX(0%)); }
+  100% {
+    @include transform(translateX(-100%));
+    display: none;
+  }
+}

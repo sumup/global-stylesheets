@@ -1,0 +1,64 @@
+//-------------------------------------
+// Display
+//-------------------------------------
+
+%inline {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+//-------------------------------------
+// Custom float clearing
+//-------------------------------------
+
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
+//-------------------------------------
+// Alignment
+//-------------------------------------
+
+%vertical-align {
+  @include transform(translate3d(0, -50%, 0));
+  position: relative;
+  top: 50%;
+}
+
+//-------------------------------------
+// Margins
+//-------------------------------------
+
+%no-margin { margin: 0 }
+%no-margin-top { margin-top: 0 }
+%no-margin-bottom { margin-bottom: 0 }
+
+%margin-top-tiny { margin-top: em(5) }
+%margin-top-small { margin-top: em(10) }
+%margin-top-medium { margin-top: em(20) }
+%margin-top-large { margin-top: em(50) }
+
+%margin-bottom-tiny { margin-bottom: em(5) }
+%margin-bottom-small { margin-bottom: em(10) }
+%margin-bottom-medium { margin-bottom: em(20) }
+%margin-bottom-large { margin-bottom: em(50) }
+
+//-------------------------------------
+// Border
+//-------------------------------------
+
+%no-border {
+  border: none;
+} 
