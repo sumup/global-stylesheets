@@ -1,0 +1,79 @@
+// Styles for buttons
+//
+// .dark                  - Solid button, with a dark grey background
+// .bright                - Solid button, with a white grey background
+// .highlight             - Solid button, with a blue grey background
+// .dark-outline          - Outline button, with a dark grey border
+// .bright-outline        - Outline button, with a white grey border
+// .highlight-outline     - Outline button, with a blue grey border
+// .small                 - Smaller buttons
+// .pill                  - Smaller, pill-styled outline buttons
+// 
+// Styleguide 1.0
+
+.button-set {
+  a, button {
+    @extend %inline;
+  }
+}
+
+%button-outline {
+  background: none;
+  border-radius: $layoutCornerRadius;
+  border-top: solid;
+  border-width: 1px;
+}
+
+.button {
+  @include transition(all .2s cubic-bezier(.4, .0, .2, 1));
+  position: relative;
+  display: inline-block;
+  text-shadow: 0 1px 0px rgba(black, .2);
+  font-weight: 500;
+  font-family: $fontFamilyDisplay;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  border: none;
+  border-radius: $layoutCornerRadius;
+  padding: 1.1em 1.6em;
+  background: $colorCorpHighlight;
+  color: $colorOffWhite;
+  text-decoration: none;
+  cursor: pointer;
+
+  &.dark {
+    background: $colorDarkGrey;
+  }
+
+  &.bright {
+   background: $colorOffWhite; 
+   color: $colorDarkGrey;
+  }
+
+  &.highlight {
+    
+  }
+
+  &.dark-outline {
+    @extend %button-outline;
+    border-color: $colorDarkGrey;
+    color: $colorDarkGrey;
+  }
+
+  &.bright-outline {
+    @extend %button-outline;
+  }
+
+  &.highlight-outline {
+    @extend %button-outline;
+  }
+
+  &.small {
+    
+  }
+
+  &.pill {
+    @extend %button-outline;
+  }
+}
