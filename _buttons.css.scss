@@ -175,6 +175,7 @@
   &.call-to-action {
     display: block;
     background-color: $colorCorpSecondary;
+    border-color: $colorCorpSecondary;
 
     @include media($breakDesktop) { display: inline-block }
 
