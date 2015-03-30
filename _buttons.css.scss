@@ -179,8 +179,11 @@
 
     @include media($breakDesktop) { display: inline-block }
 
-    &:hover, &:active, &:focus {
+    &:hover,
+    &:active,
+    &:focus {
       background-color: darken($colorCorpSecondary, 5%);
+      border-color: darken($colorCorpSecondary, 5%);
     }
 
     &.secondary {
