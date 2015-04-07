@@ -362,3 +362,11 @@
     padding: .3em .9em;
   }
 }
+
+/*
+    Exceptions for v1 design
+ */
+
+body.v1 {
+  .button.call-to-action { border-color: $colorCorpHighlight }
+}
