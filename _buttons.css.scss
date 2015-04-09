@@ -174,25 +174,16 @@
 
   &.call-to-action {
     display: block;
-    background-color: $colorCorpSecondary;
-    border-color: $colorCorpSecondary;
+    background-color: $colorCorpHighlight;
+    border-color: $colorCorpHighlight;
 
     @include media($breakDesktop) { display: inline-block }
 
     &:hover,
     &:active,
     &:focus {
-      background-color: darken($colorCorpSecondary, 5%);
-      border-color: darken($colorCorpSecondary, 5%);
-    }
-
-    &.secondary {
-      background-color: $colorCorpHighlight;
-      color: $colorOffWhite;
-
-      &:hover, &:active, &:focus {
-        background-color: darken($colorCorpHighlight, 5%);
-      }
+      background-color: darken($colorCorpHighlight, 5%);
+      border-color: darken($colorCorpHighlight, 5%);
     }
   }
 
