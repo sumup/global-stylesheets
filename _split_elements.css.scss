@@ -1,8 +1,34 @@
+// Common DOM elements such as hyperlinks, lists, images, code, etc.
+//
+// .styled                       - Add little arrow pointers to each list item
+// 
+// Styleguide 1.0.
+
+//-------------------------------------
+// Hyperlinks
+//-------------------------------------
+
+a { text-decoration: none }
+
+p a {
+  @include transition(all .2s);
+  text-decoration: underline;
+  color: $colorCorpHighlight;
+
+  &:hover,
+  &:active,
+  &:focus {
+    @include transition(all .2s);
+    color: $colorCorpHighlight;
+  }
+}
+
 //-------------------------------------
 // Lists
 //-------------------------------------
 
 ul {
+  @extend .unstyled;
   list-style: none;
   padding-left: 0;
 
@@ -45,10 +71,6 @@ ul {
       text-shadow: 0 1px 0 rgba(black, .3);
     }
   }
-
-  &.footnotes li {
-    line-height: .8em;
-  }
 }
 
 ol {
@@ -61,13 +83,6 @@ ol {
   }
 }
 
-dl {}
-
-dt {}
-
-dd {}
-
-
 //-------------------------------------
 // Images
 //-------------------------------------
@@ -75,6 +90,28 @@ dd {}
 img {
   display: block;
   width: 100%;
+}
+
+figcaption {
+  font-size: 1em;
+  font-weight: 100;
+  text-transform: none;
+  color: $colorDarkGrey;
+  padding-left: 0;
+  position: static;
+
+  strong { color: $colorCorpHighlight }
+
+  &:before {
+    content: "";
+    display: block;
+    width: 1.5em;
+    height: 1px;
+    background-color: $colorCorpHighlight;
+    position: absolute;
+    top: .8em;
+    left: 0;
+  }
 }
 
 //-------------------------------------

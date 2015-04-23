@@ -1,28 +1,30 @@
+// Grid & layout settings
+//
+// $breakPhonePortrait 				- Breakpoint for mobile, triggers at min-width: 321px
+// $breakTabletPortrait				- Breakpoint for tablet, triggers at min-width: 481px
+// $breakTabletLandscape			- Breakpoint for tablet, triggers at min-width: 769px
+// $breakDesktop					- Breakpoint for desktop, triggers at min-width: 1025px
+// $breakLargescreen:				- Breakpoint for desktop, triggers at min-width: 1441px
+//
+// Styleguide 1.0.
+
 $max-width: 1024px;
 
-// ------------------------------------------------------------
+//-------------------------------------
 // Overrides for Neat
-// ------------------------------------------------------------
+//-------------------------------------
 
 $column: golden-ratio(1em, 3) !default;
 $gutter: golden-ratio(1em, 3) !default;
 $fg-column: $column;
 $fg-gutter: $gutter;
 
-// ------------------------------------------------------------
-// Main breakpoints
-// ------------------------------------------------------------
+//-------------------------------------
+// Breakpoints
+//-------------------------------------
 
 $breakPhonePortrait: new-breakpoint(min-width 321px);
 $breakTabletPortrait: new-breakpoint(min-width 481px);
 $breakTabletLandscape: new-breakpoint(min-width 769px);
 $breakDesktop: new-breakpoint(min-width 1025px);
 $breakLargescreen: new-breakpoint(min-width 1441px);
-
-// ------------------------------------------------------------
-// Secondary breakpoints
-// ------------------------------------------------------------
-
-$breakTabletPortraitAfter: new-breakpoint(min-width 531px);
-$breakTabletLandscapeAfter: new-breakpoint(min-width 819px);
-$breakDesktopAfter: new-breakpoint(min-width 1075px);
