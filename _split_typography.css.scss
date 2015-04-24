@@ -51,7 +51,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-	font-size: 1.3em
+	font-size: 1.3em;
 	@include media($breakTabletLandscape) { font-size: 1.5em }
 	@include media($breakDesktop) { font-size: 3em }
 }

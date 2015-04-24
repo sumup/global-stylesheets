@@ -4,7 +4,6 @@
 // $grid-columns: 2;
 $max-width: 1024px;
 
-
 // ------------------------------------------------------------
 // Override Neat's grid settings
 // ------------------------------------------------------------
@@ -30,3 +29,4 @@ $breakTabletLandscapeAfter: new-breakpoint(min-width 819px);
 $breakDesktop: new-breakpoint(min-width 1025px);
 $breakDesktopAfter: new-breakpoint(min-width 1075px);
 $breakLargescreen: new-breakpoint(min-width 1441px);
+$untilBreakDesktop: new-breakpoint(max-width $max-width);
