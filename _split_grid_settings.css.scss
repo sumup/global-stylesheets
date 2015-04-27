@@ -8,7 +8,7 @@
 //
 // Styleguide 1.0.
 
-$max-width: 1024px;
+$max-width: 960px;
 
 //-------------------------------------
 // Overrides for Neat
@@ -28,3 +28,4 @@ $breakTabletPortrait: new-breakpoint(min-width 481px);
 $breakTabletLandscape: new-breakpoint(min-width 769px);
 $breakDesktop: new-breakpoint(min-width 1025px);
 $breakLargescreen: new-breakpoint(min-width 1441px);
+$untilBreakDesktop: new-breakpoint(max-width $max-width);

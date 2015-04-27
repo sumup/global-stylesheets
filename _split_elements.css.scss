@@ -65,7 +65,6 @@ ul {
       content: '\2714';
       top: .65em;
       left: 0;
-      font-size: 12px;
       margin-top: -0.7em;
       color: $colorCorpHighlight;
       text-shadow: 0 1px 0 rgba(black, .3);
@@ -93,7 +92,6 @@ img {
 }
 
 figcaption {
-  font-size: 1em;
   font-weight: 100;
   text-transform: none;
   color: $colorDarkGrey;
@@ -123,6 +121,5 @@ code {
   background-color: $colorLightGrey;
   padding: .2em 1em;
   border-radius: $layoutCornerRadius;
-  font-size: em(12);
   overflow-x: auto;
 }
