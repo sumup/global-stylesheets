@@ -55,6 +55,8 @@ $layoutCompPadding: 2 * $layoutPagePadding;
 $layoutCornerRadius: 3px;
 
 %no-margin { margin: 0 }
+%no-margin-top { margin-top: 0 }
+%no-margin-bottom { margin-bottom: 0 }
 %margin-top-tiny { margin-top: .3em }
 %margin-top-small { margin-top: .5em }
 %margin-top-medium { margin-top: 1em }
