@@ -65,3 +65,11 @@ $layoutCornerRadius: 3px;
 %margin-bottom-small { margin-bottom: .5em }
 %margin-bottom-medium { margin-bottom: 1em }
 %margin-bottom-large { margin-bottom: 2em }
+
+//-------------------------------------
+// Static URL
+//-------------------------------------
+
+@mixin static-image($url) {
+  background-image: url('https://static.sumup.com/assets/images/marketing/#{$url}');
+}
