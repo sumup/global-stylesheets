@@ -8,7 +8,8 @@
 // Images
 //-------------------------------------
 
-.icon { fill: white }
+.icon,
+.icon use>svg { fill: white }
 
 //-------------------------------------
 // Hyperlinks
