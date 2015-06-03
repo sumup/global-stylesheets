@@ -3,7 +3,7 @@
 // .button                       - Default solid button, with blue background
 // .button.dark                  - Solid button, with dark grey background
 // .button.bright                - Solid button, with white background
-// .button.outline               - Outline button, with blue grey border
+// .button.outline               - Outline button, with blue border
 // .button.dark.outline          - Outline button, with dark grey border
 // .button.bright.outline        - Outline button, with white grey border
 // .button.small                 - Smaller buttons
@@ -59,9 +59,17 @@
   }
 
   &.outline {
-    @extend %button-outline;
+    @extend %outline-button;
     border-color: $colorCorpHighlight;
     color: $colorCorpHighlight;
+
+    &:hover,
+    &:active,
+    &:focus {
+      @include transition(all .2s cubic-bezier(.4, .0, .2, 1));
+      background: $colorCorpHighlight;
+      color: white;
+    }
   }
 
   @include media($breakTabletLandscape) { display: inline-block }
@@ -80,6 +88,14 @@
       @extend %outline-button;
       border-color: $colorDarkGrey;
       color: $colorDarkGrey;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: $colorCorpSecondary;
+        border-color: $colorCorpSecondary;
+        color: white;
+      }
     }
   }
 
@@ -123,6 +139,6 @@
   &.small { padding: .7em }
 
   &.pill {
-    @extend %button-outline;
+    @extend %outline-button;
   }
 }
