@@ -6,6 +6,12 @@
 //
 // Styleguide 1.0.
 
+@include keyframes(pulse) {
+  0% { @include transform(scale(1)); opacity: 1; }
+  50% { @include transform(scale(1.4)); opacity: .7; }
+  100% { @include transform(scale(1)); opacity: 1; }
+}
+
 @include keyframes(scrollDown) {
   0% { @include transform(translateY(.35em)); }
   50% { @include transform(translateY(-.35em)); }
