@@ -14,9 +14,9 @@
   text-shadow: 0 1px 0px rgba(black, .2) ;
   text-align: center;
   white-space: nowrap;
-  border: none;
+  border: 1px solid $colorCorpHighlight;
   border-radius: $layoutCornerRadius;
-  padding: 1.1em 1.6em;
+  padding: .9em 1.6em;
   background-color: $colorCorpHighlight;
   color: white;
   text-decoration: none;
@@ -38,6 +38,7 @@
   &:hover {
     color: white;
     background-color: $colorCorpHighlightLighter;
+    border-color: $colorCorpHighlightLighter;
   }
 
   &:focus { outline: none } // fixing glowing buttons on webkit
@@ -52,6 +53,7 @@
   &.grey {
     color: $colorDarkGrey;
     background-color: $colorLightGrey;
+    border-color: $colorLightGrey;
     border-bottom-color: $colorBorderLight;
     text-shadow: none;
 
@@ -65,6 +67,7 @@
   &.dark {
     color: $colorOffWhite;
     background-color: $colorDarkGrey;
+    border-color: $colorDarkGrey;
     border-bottom-color: $colorBorderDark;
     text-shadow: none;
 
@@ -76,6 +79,7 @@
   &.green {
     color: $colorOffWhite;
     background-color: $colorSuccessDarker;
+    border-color: $colorSuccessDarker;
     border-bottom-color: shade($colorSuccessDarker, 5%);
     text-shadow: none;
 
@@ -87,6 +91,7 @@
   &.white {
     color: $colorDarkGrey;
     background-color: $colorOffWhite;
+    border-color: $colorOffWhite;
     border-bottom-color: $colorBorderLight;
     text-shadow: none;
   }
@@ -169,21 +174,16 @@
 
   &.call-to-action {
     display: block;
-    background-color: $colorCorpSecondary;
+    background-color: $colorCorpHighlight;
+    border-color: $colorCorpHighlight;
 
     @include media($breakDesktop) { display: inline-block }
 
-    &:hover, &:active, &:focus {
-      background-color: darken($colorCorpSecondary, 5%);
-    }
-
-    &.secondary {
-      background-color: $colorCorpHighlight;
-      color: $colorOffWhite;
-
-      &:hover, &:active, &:focus {
-        background-color: darken($colorCorpHighlight, 5%);
-      }
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: darken($colorCorpHighlight, 5%);
+      border-color: darken($colorCorpHighlight, 5%);
     }
   }
 
@@ -352,4 +352,12 @@
     font-size: em(10, 16);
     padding: .3em .9em;
   }
+}
+
+/*
+    Exceptions for v1 design
+ */
+
+body.v1 {
+  .button.call-to-action { border-color: $colorCorpHighlight }
 }

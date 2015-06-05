@@ -1,3 +1,23 @@
+// Layout and display helpers
+//
+// %inline                    - Applies inline display
+// %vertical-align            - Vertically centers elements, independently of their parents
+// @mixin omega-reset($nth)   - Custom mixin for float clearing
+// $layoutPagePadding         - 1em
+// $layoutCompPadding         - 2 * $layoutPagePadding
+// $layoutCornerRadius        - 3px
+// %no-margin                 - No margin
+// %margin-top-tiny           - Adds a tiny .3em top margin
+// %margin-top-small          - Adds a small .5em top margin
+// %margin-top-medium         - Adds a medium 1em top margin
+// %margin-top-large          - Adds a large 2em top margin
+// %margin-bottom-tiny        - Adds a tiny .3em bottom margin
+// %margin-bottom-small       - Adds a small .5em bottom margin
+// %margin-bottom-medium      - Adds a medium 1em bottom margin
+// %margin-bottom-large       - Adds a large 2em bottom margin
+//
+// Styleguide 1.0.
+
 //-------------------------------------
 // Display
 //-------------------------------------
@@ -5,17 +25,6 @@
 %inline {
   display: inline-block;
   vertical-align: middle;
-}
-
-.visuallyhidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
 }
 
 //-------------------------------------
@@ -38,27 +47,29 @@
 }
 
 //-------------------------------------
-// Margins
+// Spacing (margins, paddings)
 //-------------------------------------
+
+$layoutPagePadding: 1em;
+$layoutCompPadding: 2 * $layoutPagePadding;
+$layoutCornerRadius: 3px;
 
 %no-margin { margin: 0 }
 %no-margin-top { margin-top: 0 }
 %no-margin-bottom { margin-bottom: 0 }
-
-%margin-top-tiny { margin-top: em(5) }
-%margin-top-small { margin-top: em(10) }
-%margin-top-medium { margin-top: em(20) }
-%margin-top-large { margin-top: em(50) }
-
-%margin-bottom-tiny { margin-bottom: em(5) }
-%margin-bottom-small { margin-bottom: em(10) }
-%margin-bottom-medium { margin-bottom: em(20) }
-%margin-bottom-large { margin-bottom: em(50) }
+%margin-top-tiny { margin-top: .3em }
+%margin-top-small { margin-top: .5em }
+%margin-top-medium { margin-top: 1em }
+%margin-top-large { margin-top: 2em }
+%margin-bottom-tiny { margin-bottom: .3em }
+%margin-bottom-small { margin-bottom: .5em }
+%margin-bottom-medium { margin-bottom: 1em }
+%margin-bottom-large { margin-bottom: 2em }
 
 //-------------------------------------
-// Border
+// Static URL
 //-------------------------------------
 
-%no-border {
-  border: none;
-} 
+@mixin static-image($url) {
+  background-image: url('https://static.sumup.com/assets/images/marketing/#{$url}');
+}

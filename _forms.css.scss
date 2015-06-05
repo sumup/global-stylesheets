@@ -15,6 +15,12 @@ ul.form-list {
     &:before { content: "" }
   }
 
+  &.split {
+    @include row;
+
+    &>li { @include span-columns(6 of 12) }
+  }
+
   label {
     @include transition(color .2s);
     display: block;
@@ -126,7 +132,8 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="tel"],
-select {
+select,
+.custom.select select{
 
   &.parsley-success,
   &.ng-valid.ng-dirty {
