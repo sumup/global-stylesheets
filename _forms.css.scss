@@ -47,6 +47,7 @@ ul.form-list {
   input[type="tel"],
   input[type="number"],
   input[type="date"],
+  input[type="url"],
   textarea {
     @include appearance(none);
     @include transition (border-color .2s);
