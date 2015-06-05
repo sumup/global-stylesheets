@@ -39,6 +39,8 @@ ul.form-list {
   input[type="email"],
   input[type="password"],
   input[type="tel"],
+  input[type="number"],
+  input[type="date"],
   textarea {
     @include appearance(none);
     @include transition (border-color .2s);
