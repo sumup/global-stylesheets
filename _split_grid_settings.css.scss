@@ -30,3 +30,8 @@ $breakDesktop: new-breakpoint(min-width 1025px);
 $breakLargescreen: new-breakpoint(min-width 1441px);
 $untilBreakTabletLandscape: new-breakpoint(max-width 768px);
 $untilBreakDesktop: new-breakpoint(max-width $max-width);
+
+/* Dashboard legacy */
+$breakTabletPortraitAfter: new-breakpoint(min-width 531px);
+$breakTabletLandscapeAfter: new-breakpoint(min-width 819px);
+$breakDesktopAfter: new-breakpoint(min-width 1075px);
