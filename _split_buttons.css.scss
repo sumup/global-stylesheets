@@ -2,7 +2,9 @@
 //
 // .button                       - Default solid button, with blue background
 // .button.dark                  - Solid button, with dark grey background
+// .button.grey                  - Solid button, with light grey background
 // .button.bright                - Solid button, with white background
+// .button.green                 - Solid button, with green background
 // .button.outline               - Outline button, with blue border
 // .button.dark.outline          - Outline button, with dark grey border
 // .button.bright.outline        - Outline button, with white grey border
@@ -114,6 +116,18 @@
       @extend %outline-button;
       border-color: white;
       color: white;
+    }
+  }
+
+  &.grey {
+    background: $colorLightGrey; 
+    color: $colorDarkGrey;
+
+    &:hover,
+    &:active,
+    &:focus {
+      @include transition(all .2s cubic-bezier(.4, .0, .2, 1));
+      background: darken($colorLightGrey, 5%);
     }
   }
 

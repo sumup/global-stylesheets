@@ -18,12 +18,16 @@
   list-style: none;
 
   &>li {
-    @extend %margin-bottom-small;
+    @extend %margin-bottom-medium;
     position: relative;
     padding-left: 0;
 
     &:before { content: "" }
+
+    &:last-child { @extend %no-margin-bottom }
   }
+
+  // .validation { @extend %no-margin-bottom }
 
   &.split {
     @include row;
