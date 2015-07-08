@@ -17,7 +17,11 @@
   @include clearfix;
   @extend %margin-top-small;
 
-  p { margin: 0 }
+  p {
+    display: inline-block;
+    font-size: .8em;
+    padding-left: 1em;
+  }
 }
 
 %outline-button {
@@ -122,6 +126,7 @@
   &.grey {
     background: $colorLightGrey; 
     color: $colorDarkGrey;
+    text-shadow: none;
 
     &:hover,
     &:active,
