@@ -18,7 +18,7 @@
   list-style: none;
 
   &>li {
-    @extend %margin-bottom-large;
+    @extend %margin-bottom-medium;
     position: relative;
     padding-left: 0;
 
@@ -27,13 +27,7 @@
     &:last-child { @extend %no-margin-bottom }
   }
 
-  // .validation { @extend %no-margin-bottom }
-
-  &.split {
-    @include row;
-
-    &>li { @include span-columns(6 of 12) }
-  }
+  .validation { @extend %no-margin-bottom }
 
   label {
     @include transition(color .2s);
@@ -106,6 +100,26 @@
 	      display: block;
 	    }
 	  }
+  }
+}
+
+.split {
+  @include row;
+  @include outer-container;
+
+  &>li { @include span-columns(6 of 12) }
+
+  .nobreak {
+    @include span-columns(6);
+    @include omega(2n);
+  }
+
+  @include media($breakTabletLandscape) {
+
+    .two {
+      @include span-columns(6);
+      @include omega(2n);
+    }
   }
 }
 
