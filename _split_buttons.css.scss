@@ -21,6 +21,10 @@
     display: inline-block;
     font-size: .8em;
   }
+
+  li {
+    @include media($breakTabletLandscape) { display: inline-block }
+  }
 }
 
 %outline-button {
