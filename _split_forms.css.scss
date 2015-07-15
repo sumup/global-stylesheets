@@ -6,11 +6,21 @@
 // .form-list li								- All inputs should be wrapper inside a <li>, within .form-list
 // .form-list li.custom					- Wrapper for custom checkboxes and radio buttons
 // .form-list li.custom.select	- Wrapper for custom select inputs, with <select> as children
-// .form-list label 						— Labels should always go before their respective inputs
+// label             						— Labels should always go before their respective inputs
 // .validation-list 						- Error <ul> lists, whose messages should be wrapped within <li> elements
 // .validation-list.detach 			- Error <ul> lists, specifically made for checkboxes, radio buttons, and floating inputs
 //
 // Styleguide 1.0.
+
+label {
+  @include transition(color .2s);
+  display: block;
+  margin-bottom: 1px;
+  font-size: em(10, 14);
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $colorDarkGrey;
+}
 
 .form-list {
   padding: 0;
@@ -28,16 +38,6 @@
   }
 
   .validation { @extend %no-margin-bottom }
-
-  label {
-    @include transition(color .2s);
-    display: block;
-    margin-bottom: 1px;
-    font-size: em(10, 14);
-    font-weight: 300;
-    text-transform: uppercase;
-    color: $colorDarkGrey;
-  }
 
   input[type="text"],
   input[type="email"],
@@ -61,46 +61,6 @@
   }
 
   textarea { min-height: 200px }
-
-  //-------------------------------------
-  // Hinting labels
-  //-------------------------------------
-  
-  &.hint {
-    label {
-      border-top-left-radius: $layoutCornerRadius;
-      border-top-right-radius: $layoutCornerRadius;
-      background-color: $colorCorpHighlight;
-      box-shadow: 0 -2px 0 rgba($colorCorpHighlight, .2);
-      padding: em(3) 1em;
-      display: none;
-      position: absolute;
-      top: -20px;
-      color: $colorOffWhite;
-      z-index: 1;
-
-      @include media($breakTabletPortrait) { top: -25px }
-    }
-
-    &>li {
-    	position: relative;
-    	z-index: 3;
-    }
-
-    input[type="text"],
-	  input[type="email"],
-	  input[type="password"],
-	  input[type="tel"],
-	  textarea {
-	  	position: relative;
-	  	z-index: 2;
-
-	  	&:focus ~ label {
-	      @include animation(fadeInUp .2s 0s backwards);
-	      display: block;
-	    }
-	  }
-  }
 }
 
 .split {
@@ -115,7 +75,6 @@
   }
 
   @include media($breakTabletLandscape) {
-
     .two {
       @include span-columns(6);
       @include omega(2n);
@@ -273,7 +232,7 @@ select {
     z-index: 25;
     font-size: 1.5em;
     right: 1em;
-    top: .6em;
+    top: 11px;
     color: $colorMediumGrey;
   }
 
