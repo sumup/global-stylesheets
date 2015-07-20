@@ -32,7 +32,7 @@ label {
     position: relative;
     padding-left: 0;
 
-    &:before { content: "" }
+    // &:before { content: "" }
 
     &:last-child { @extend %no-margin-bottom }
   }
@@ -40,6 +40,7 @@ label {
   .validation { @extend %no-margin-bottom }
 
   input[type="text"],
+  input[type="url"],
   input[type="email"],
   input[type="password"],
   input[type="tel"],
@@ -87,6 +88,7 @@ label {
 //-------------------------------------
 
 input[type="text"],
+input[type="url"],
 input[type="email"],
 input[type="password"],
 input[type="tel"],
@@ -232,7 +234,7 @@ select {
     z-index: 25;
     font-size: 1.5em;
     right: 1em;
-    top: 11px;
+    top: 13px;
     color: $colorMediumGrey;
   }
 
