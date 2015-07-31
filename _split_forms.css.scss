@@ -37,6 +37,13 @@ label {
     &:last-child { @extend %no-margin-bottom }
   }
 
+  .optional {
+    input,
+    select {
+      border-style: dashed !important;
+    }
+  }
+
   .validation { @extend %no-margin-bottom }
 
   input[type="text"],

@@ -158,7 +158,15 @@
     }
   }
 
-  &.small { padding: .7em }
+  &.small {
+    padding: .7em;
+
+    &.loading .spinner {
+      background-size: 1em;
+      top: 0.3em;
+      right: 0.5em;
+    }
+  }
 
   &.pill {
     @extend %outline-button;
