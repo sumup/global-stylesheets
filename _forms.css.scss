@@ -144,14 +144,14 @@ select,
 
   &.parsley-success,
   &.ng-valid.ng-dirty {
-    border-color: $colorSuccess;
+    border-color: $colorSuccess !important;
     border-style: solid;
     border-width: 1px;
   }
 
   &.parsley-error,
   &.ng-invalid.ng-dirty {
-    border-color: $colorError;
+    border-color: $colorError !important;
     border-style: solid;
     border-width: 1px;
   }
