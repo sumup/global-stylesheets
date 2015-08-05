@@ -2,7 +2,9 @@
 //
 // .button                       - Default solid button, with blue background
 // .button.dark                  - Solid button, with dark grey background
+// .button.grey                  - Solid button, with light grey background
 // .button.bright                - Solid button, with white background
+// .button.green                 - Solid button, with green background
 // .button.outline               - Outline button, with blue border
 // .button.dark.outline          - Outline button, with dark grey border
 // .button.bright.outline        - Outline button, with white grey border
@@ -15,7 +17,14 @@
   @include clearfix;
   @extend %margin-top-small;
 
-  p { margin: 0 }
+  p {
+    display: inline-block;
+    font-size: .8em;
+  }
+
+  li {
+    @include media($breakTabletLandscape) { display: inline-block }
+  }
 }
 
 %outline-button {
@@ -117,6 +126,19 @@
     }
   }
 
+  &.grey {
+    background: $colorLightGrey; 
+    color: $colorDarkGrey;
+    text-shadow: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      @include transition(all .2s cubic-bezier(.4, .0, .2, 1));
+      background: darken($colorLightGrey, 5%);
+    }
+  }
+
   &.green {
    background: $colorCorpSecondary; 
    color: $colorCorpSecondary;
@@ -136,7 +158,15 @@
     }
   }
 
-  &.small { padding: .7em }
+  &.small {
+    padding: .7em;
+
+    &.loading .spinner {
+      background-size: 1em;
+      top: 0.3em;
+      right: 0.5em;
+    }
+  }
 
   &.pill {
     @extend %outline-button;
