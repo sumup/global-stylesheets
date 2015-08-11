@@ -166,9 +166,20 @@
       top: 0.3em;
       right: 0.5em;
     }
+
+    .checkmark {
+      width: 15px;
+      height: 20px;
+      margin-right: 5px;
+    }
   }
 
   &.pill {
     @extend %outline-button;
+  }
+
+  &.warning {
+    background-color: $colorWarningDarker;
+    border-color: $colorWarningDarker;
   }
 }
