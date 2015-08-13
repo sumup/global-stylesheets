@@ -206,14 +206,13 @@ select {
   }
 
   input[type="checkbox"]:checked + label:after {
-    content: '\e617';
-    font-family: 'sumup-icons';
-    font-size: 20px;
+    content: '✔';
+    font-size: 11px;
     font-weight: normal;
     line-height: 0;
     border-radius: 2px;
-    top: 8px;
-    left: 1px;
+    top: 11px;
+    left: 4px;
     color: $colorCorpHighlight;
   }
 
