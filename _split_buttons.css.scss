@@ -183,3 +183,28 @@
     border-color: $colorWarningDarker;
   }
 }
+
+/**
+ * Loading spinner
+ */
+
+.spinner {
+  @include size(18px);
+  @include transition(all .3s .2s ease-in-out);
+  background: url('/images/spinner-bright.svg') no-repeat center center;
+  display: none;
+  position: absolute;
+  right: .8em;
+  top: .9em;
+}
+
+/**
+ * Apply .loading to parent button to enable spinner
+ */
+
+&.loading { 
+  @include transition(padding .2s ease-in-out);
+  padding-right: 2.5em !important;
+
+  .spinner { display: inline-block }
+}
