@@ -1,16 +1,22 @@
 // Forms, inputs, fieldsets, etc.
 //
+// label                        — Labels should always go before their respective inputs
 // .form-list         					- To be applied to <form> or elements or to its children <ul>
-// .form-list.split							- For two inputs side by side, apply .split and use only two <li> children
-// .form-list.hint							- Replace child labels with sliding hints
+// .form-list.inline-inputs			- For two inputs side by side, apply .split and use only two <li> children
 // .form-list li								- All inputs should be wrapper inside a <li>, within .form-list
 // .form-list li.custom					- Wrapper for custom checkboxes and radio buttons
 // .form-list li.custom.select	- Wrapper for custom select inputs, with <select> as children
-// label             						— Labels should always go before their respective inputs
 // .validation-list 						- Error <ul> lists, whose messages should be wrapped within <li> elements
 // .validation-list.detach 			- Error <ul> lists, specifically made for checkboxes, radio buttons, and floating inputs
 //
 // Styleguide 1.0.
+
+fieldset {
+  @extend %margin-bottom-large;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
 
 label {
   @include transition(color .2s);
@@ -31,96 +37,49 @@ label {
     @extend %margin-bottom-medium;
     position: relative;
     padding-left: 0;
-
-    // &:before { content: "" }
-
-    &:last-child { @extend %no-margin-bottom }
-  }
-
-  .optional {
-    input,
-    select {
-      border-style: dashed !important;
-    }
   }
 
   .validation { @extend %no-margin-bottom }
-
-  input[type="text"],
-  input[type="url"],
-  input[type="email"],
-  input[type="password"],
-  input[type="tel"],
-  textarea {
-    @include appearance(none);
-    @include transition (border-color .2s);
-    @include placeholder { color: $colorLightGrey };
-    outline: none;
-    background: white;
-    width: 100%;
-    border: 1px solid;
-    border-color: $colorLightGrey;
-    border-radius: $layoutCornerRadius;
-    padding: 0.8em 1em;
-
-    &:focus,
-    &:hover,
-    &:active { border-color: $colorCorpHighlight }
-  }
-
-  textarea { min-height: 200px }
 }
 
-.split {
+//-------------------------------------
+// Side-by-side inputs
+//-------------------------------------
+
+.inline-inputs {
   @include row;
-  @include outer-container;
+  list-style-type: none;
 
-  &>li { @include span-columns(6 of 12) }
+  li {
+    width: 46%;
+    padding: 0;
+    display: inline-block;
+    float: left;
 
-  .nobreak {
-    @include span-columns(6);
-    @include omega(2n);
-  }
-
-  @include media($breakTabletLandscape) {
-    .two {
-      @include span-columns(6);
-      @include omega(2n);
+    &:before { content: ''; }
+    &:nth-of-type(odd) {
+      margin-right: 8%;
     }
   }
+
+  &.first-bigger {
+    li:first-child { width: 70% }
+    li:nth-child(2) { width: 22% }
+  }
 }
 
 //-------------------------------------
-// Errors and validation
+// Errors containers
 //-------------------------------------
-
-input[type="text"],
-input[type="url"],
-input[type="email"],
-input[type="password"],
-input[type="tel"],
-select {
-
-  &.parsley-success,
-  &.ng-valid.ng-dirty {
-    border-color: $colorSuccess;
-    border-style: solid;
-    border-width: 1px;
-  }
-
-  &.parsley-error,
-  &.ng-invalid.ng-dirty {
-    border-color: $colorError;
-    border-style: solid;
-    border-width: 1px;
-  }
-}
 
 .parsley-errors-list,
 .validation-list {
   font-size: em(12);
+  position: relative;
+  z-index: 17;
 
   li {
+    @include transition;
     @include border-bottom-radius($layoutCornerRadius);
     position: relative;
     top: -1px;
@@ -131,6 +90,23 @@ select {
     background: $colorError;
     color: $colorOffWhite;
     padding: .5em 1em !important;
+
+    &.ng-hide-remove {
+      @include animation(fadeInDown .2s ease-in);
+    }
+    
+    &.ng-hide-add-active {
+      position: absolute;
+      width: 100%;
+      @include animation(fadeOutUp .2s ease-in);
+    }
+
+    &.warning {
+      border-left: 1px solid $colorWarningDarker !important;
+      border-bottom: 1px solid $colorWarningDarker !important;
+      border-right: 1px solid $colorWarningDarker !important;
+      background: $colorWarningDarker !important;
+    }
 
     p { margin: 0 }
   }
@@ -155,6 +131,89 @@ select {
     }
   }
 }
+
+//-------------------------------------
+// Default inputs
+//-------------------------------------
+
+input[type="text"],
+input[type="url"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+textarea {
+  @include appearance(none);
+  @include transition (border-color .2s);
+  @include placeholder { color: $colorLightGrey };
+  outline: none;
+  background: white;
+  width: 100%;
+  border: 1px solid;
+  border-color: $colorLightGrey;
+  border-radius: $layoutCornerRadius;
+  padding: 0.8em 1em;
+  position: relative;
+  z-index: 20;
+
+  &:focus,
+  &:hover,
+  &:active { border-color: $colorCorpHighlight }
+
+  /**
+   * Optional
+   */
+
+  &.optional { border-style: dashed !important }
+
+  /**
+   * Disabled
+   */
+  
+  &[disabled],
+  &[disabled="disabled"],
+  &[disabled],
+  &[disabled="disabled"],
+  &[readonly],
+  &[readonly] {
+    cursor: no-drop;
+    border: 0;
+    padding-left: 0;
+    color: darken($colorLightGrey, 20%);
+    font-family: monospace;
+    padding-top: 0;
+    border-bottom: 1px dashed #eee;
+    -webkit-text-fill-color: darken($colorLightGrey, 20%);
+    -webkit-opacity: 1;
+    background: white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      cursor: default;
+      border-color: $colorLightGrey;
+    }
+  }
+
+  /**
+   * Errored
+   */
+  
+  &.parsley-success,
+  &.ng-valid.ng-dirty {
+    border-color: $colorSuccess;
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  &.parsley-error,
+  &.ng-invalid.ng-dirty {
+    border-color: $colorError;
+    border-style: solid;
+    border-width: 1px;
+  }
+}
+
+textarea { min-height: 200px }
 
 //-------------------------------------
 // Custom inputs
