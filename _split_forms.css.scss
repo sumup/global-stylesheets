@@ -141,7 +141,8 @@ input[type="url"],
 input[type="email"],
 input[type="password"],
 input[type="tel"],
-textarea {
+textarea,
+select {
   @include appearance(none);
   @include transition (border-color .2s);
   @include placeholder { color: $colorLightGrey };
@@ -175,23 +176,7 @@ textarea {
   &[disabled="disabled"],
   &[readonly],
   &[readonly] {
-    cursor: no-drop;
-    border: 0;
-    padding-left: 0;
-    color: darken($colorLightGrey, 20%);
-    font-family: monospace;
-    padding-top: 0;
-    border-bottom: 1px dashed #eee;
-    -webkit-text-fill-color: darken($colorLightGrey, 20%);
-    -webkit-opacity: 1;
-    background: white;
-
-    &:hover,
-    &:focus,
-    &:active {
-      cursor: default;
-      border-color: $colorLightGrey;
-    }
+    @extend %readonly;
   }
 
   /**
@@ -314,6 +299,18 @@ textarea { min-height: 200px }
     cursor: pointer;
     position: relative;
     z-index: 30;
+
+    &[disabled],
+    &[disabled="disabled"],
+    &[disabled],
+    &[disabled="disabled"],
+    &[readonly],
+    &[readonly] {
+      @extend %readonly;
+    }
   }
 }
 
+country-selector[country-selector-disabled="addressFieldsetDisabled"] {
+  @extend %readonly;
+}

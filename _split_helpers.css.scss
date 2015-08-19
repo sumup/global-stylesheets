@@ -27,6 +27,26 @@
   vertical-align: middle;
 }
 
+%readonly {
+  cursor: no-drop;
+  border: 0;
+  padding-left: 0;
+  color: darken($colorLightGrey, 20%);
+  font-family: monospace;
+  padding-top: 0;
+  border-bottom: 1px dashed #eee;
+  -webkit-text-fill-color: darken($colorLightGrey, 20%);
+  -webkit-opacity: 1;
+  background: white;
+
+  &:hover,
+  &:focus,
+  &:active {
+    cursor: default;
+    border-color: $colorLightGrey;
+  }
+}
+
 //-------------------------------------
 // Custom float clearing
 //-------------------------------------
@@ -51,7 +71,6 @@
 //-------------------------------------
 
 $layoutPagePadding: 1em;
-$layoutCompPadding: 2 * $layoutPagePadding;
 $layoutCornerRadius: 3px;
 
 %no-margin { margin: 0 }
