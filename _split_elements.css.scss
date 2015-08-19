@@ -16,12 +16,14 @@ svg { fill: transparent }
 // Hyperlinks
 //-------------------------------------
 
-a { text-decoration: none }
+a {
+  color: $colorCorpHighlight;
+  text-decoration: none;
+}
 
 p a {
   @include transition(all .2s);
   text-decoration: underline;
-  color: $colorCorpHighlight;
 
   &:hover,
   &:active,
