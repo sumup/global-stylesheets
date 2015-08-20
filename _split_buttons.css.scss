@@ -15,7 +15,7 @@
 
 .button-set {
   @include clearfix;
-  @extend %margin-top-small;
+  @extend %margin-top-medium;
 
   p {
     display: inline-block;
@@ -59,6 +59,7 @@
   background: $colorCorpHighlight;
   color: white;
   cursor: pointer;
+  text-decoration: none;
 
   &:hover,
   &:active,

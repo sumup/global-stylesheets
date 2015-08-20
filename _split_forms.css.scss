@@ -34,6 +34,7 @@ label {
   list-style: none;
 
   &>li {
+    @include row;
     @extend %margin-bottom-medium;
     position: relative;
     padding-left: 0;
@@ -48,7 +49,6 @@ label {
 
 .inline-inputs {
   @include row;
-  list-style-type: none;
 
   li {
     width: 46%;
@@ -56,15 +56,46 @@ label {
     display: inline-block;
     float: left;
 
-    &:before { content: ''; }
     &:nth-of-type(odd) {
       margin-right: 8%;
+    }
+
+    ul.validation-list li {
+      width: 100%;
     }
   }
 
   &.first-bigger {
     li:first-child { width: 70% }
     li:nth-child(2) { width: 22% }
+  }
+
+  .button { width: 100% }
+
+  /* Make the custom select match other inputs */
+  .custom.select select {
+    padding: .68em 1em;
+    border: 1px solid $colorLightGrey;
+    &.ng-invalid.ng-dirty {
+      border-color: $colorError;
+    }
+  }
+
+  &.block-mobile {
+    > li {
+      width: 100%;
+      @include media($breakTabletLandscape) {
+        width: 46%;
+      }
+    }
+  }
+}
+
+.date-selects.inline-inputs {
+  li {
+    margin-right: 8%;
+    
+    &:last-child { margin-right: 0 }
   }
 }
 
@@ -164,7 +195,7 @@ select {
   border: 1px solid;
   border-color: $colorLightGrey;
   border-radius: $layoutCornerRadius;
-  padding: 0.8em 1em;
+  padding: 1em;
   position: relative;
   z-index: 20;
 
