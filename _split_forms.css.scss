@@ -56,7 +56,6 @@ label {
     display: inline-block;
     float: left;
 
-    &:before { content: ''; }
     &:nth-of-type(odd) {
       margin-right: 8%;
     }
