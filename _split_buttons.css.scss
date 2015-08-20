@@ -15,7 +15,7 @@
 
 .button-set {
   @include clearfix;
-  @extend %margin-top-small;
+  @extend %margin-top-medium;
 
   p {
     display: inline-block;
