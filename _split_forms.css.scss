@@ -37,6 +37,8 @@ label {
     @extend %margin-bottom-medium;
     position: relative;
     padding-left: 0;
+
+    &:last-child { @extend %no-margin-bottom }
   }
 
   .validation { @extend %no-margin-bottom }
