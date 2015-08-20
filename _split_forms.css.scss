@@ -132,6 +132,17 @@ label {
   }
 }
 
+/**
+ * Errored
+ */
+
+.active-validation-list {
+  .parsley-error,
+  .ng-invalid.ng-dirty {
+    border: 1px solid $colorError;
+  }
+}
+
 //-------------------------------------
 // Default inputs
 //-------------------------------------
@@ -180,22 +191,9 @@ select {
     @extend %readonly;
   }
 
-  /**
-   * Errored
-   */
-  
   &.parsley-success,
   &.ng-valid.ng-dirty {
-    border-color: $colorSuccess;
-    border-style: solid;
-    border-width: 1px;
-  }
-
-  &.parsley-error,
-  &.ng-invalid.ng-dirty {
-    border-color: $colorError;
-    border-style: solid;
-    border-width: 1px;
+    border: 1px solid $colorSuccess;
   }
 }
 
