@@ -82,8 +82,17 @@ label {
   }
 
   &.block-mobile {
-    > li {
+    & > li {
       width: 100%;
+
+      &:nth-child(even) {
+        @extend %margin-top-medium;
+
+        @include media($breakTabletLandscape) {
+          margin-top: 0 !important;
+        }
+      }
+      
       @include media($breakTabletLandscape) {
         width: 46%;
       }

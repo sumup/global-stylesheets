@@ -31,11 +31,12 @@
   cursor: no-drop;
   border: 0 !important;
   padding-left: 0;
-  color: $colorMediumGrey;
-  font-family: monospace;
+  // Temp. custom monospace font stack
+  font-family: "Menlo", "Lucida Console", Monaco, monospace;
   padding-top: 0;
   border-bottom: 1px dashed #eee !important;
-  -webkit-text-fill-color: darken($colorLightGrey, 20%);
+  color: $colorMediumGrey;
+  -webkit-text-fill-color: $colorMediumGrey;
   -webkit-opacity: 1;
   background: white;
 
