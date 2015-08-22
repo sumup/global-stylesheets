@@ -29,12 +29,12 @@
 
 %readonly {
   cursor: no-drop;
-  border: 0;
+  border: 0 !important;
   padding-left: 0;
   color: $colorMediumGrey;
   font-family: monospace;
   padding-top: 0;
-  border-bottom: 1px dashed #eee;
+  border-bottom: 1px dashed #eee !important;
   -webkit-text-fill-color: darken($colorLightGrey, 20%);
   -webkit-opacity: 1;
   background: white;
