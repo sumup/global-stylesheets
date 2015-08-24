@@ -29,12 +29,12 @@
 
 %readonly {
   cursor: no-drop;
-  border: 0;
+  border: 0 !important;
   padding-left: 0;
   // Temp. custom monospace font stack
   font-family: "Menlo", "Lucida Console", Monaco, monospace;
   padding-top: 0;
-  border-bottom: 1px dashed #eee;
+  border-bottom: 1px dashed #eee !important;
   color: $colorMediumGrey;
   -webkit-text-fill-color: $colorMediumGrey;
   -webkit-opacity: 1;
