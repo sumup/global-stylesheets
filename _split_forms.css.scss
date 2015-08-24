@@ -75,7 +75,7 @@ label {
   /* Make the custom select match other inputs */
   .custom.select select {
     padding: .68em 1em;
-    border: 1px solid $colorLightGrey;
+    border: 1px solid $colorInputBorderLight;
     &.ng-invalid.ng-dirty {
       border-color: $colorError;
     }
@@ -92,7 +92,7 @@ label {
           margin-top: 0 !important;
         }
       }
-      
+
       @include media($breakTabletLandscape) {
         width: 46%;
       }
@@ -103,7 +103,7 @@ label {
 .date-selects.inline-inputs {
   li {
     margin-right: 8%;
-    
+
     &:last-child { margin-right: 0 }
   }
 }
@@ -134,7 +134,7 @@ label {
     &.ng-hide-remove {
       @include animation(fadeInDown .2s ease-in);
     }
-    
+
     &.ng-hide-add-active {
       position: absolute;
       width: 100%;
@@ -197,12 +197,12 @@ textarea,
 select {
   @include appearance(none);
   @include transition (border-color .2s);
-  @include placeholder { color: $colorLightGrey };
+  @include placeholder { color: $colorMediumGrey };
   outline: none;
   background: white;
   width: 100%;
   border: 1px solid;
-  border-color: $colorLightGrey;
+  border-color: $colorInputBorderLight;
   border-radius: $layoutCornerRadius;
   padding: 1em;
   position: relative;
@@ -221,7 +221,7 @@ select {
   /**
    * Disabled
    */
-  
+
   &[disabled],
   &[disabled="disabled"],
   &[disabled],
@@ -329,7 +329,7 @@ textarea { min-height: 200px }
 
   select {
     @include appearance(none);
-    padding: 0.8em 1em; 
+    padding: 0.8em 1em;
     width: 100%;
     background: none;
     border: 1px solid $colorBorderLight;
