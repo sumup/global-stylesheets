@@ -60,6 +60,10 @@ label {
       margin-right: 4%;
     }
 
+    &:nth-of-type(even) {
+      float: right;
+    }
+
     ul.validation-list li {
       width: 100%;
     }
@@ -72,13 +76,10 @@ label {
 
   .button { width: 100% }
 
-  /* Make the custom select match other inputs */
   .custom.select select {
-    padding: .68em 1em;
     border: 1px solid $colorLightGrey;
-    &.ng-invalid.ng-dirty {
-      border-color: $colorError;
-    }
+
+    &.ng-invalid.ng-dirty { border-color: $colorError }
   }
 
   &.block-mobile {
@@ -92,7 +93,7 @@ label {
           margin-top: 0 !important;
         }
       }
-      
+
       @include media($breakTabletLandscape) {
         width: 46%;
       }
@@ -103,7 +104,7 @@ label {
 .date-selects.inline-inputs {
   li {
     margin-right: 8%;
-    
+
     &:last-child { margin-right: 0 }
   }
 }
@@ -134,7 +135,7 @@ label {
     &.ng-hide-remove {
       @include animation(fadeInDown .2s ease-in);
     }
-    
+
     &.ng-hide-add-active {
       position: absolute;
       width: 100%;
@@ -205,6 +206,7 @@ select {
   border-color: $colorLightGrey;
   border-radius: $layoutCornerRadius;
   padding: 1em;
+  line-height: 1;
   position: relative;
   z-index: 20;
 
@@ -221,7 +223,7 @@ select {
   /**
    * Disabled
    */
-  
+
   &[disabled],
   &[disabled="disabled"],
   &[disabled],
@@ -332,7 +334,8 @@ textarea { min-height: 200px }
   &[disabled],
   select {
     @include appearance(none);
-    padding: 0.8em 1em; 
+    padding: 1em;
+    line-height: 1;
     width: 100%;
     background: none;
     border: 1px solid $colorBorderLight;
