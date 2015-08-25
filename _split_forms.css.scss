@@ -329,9 +329,6 @@ textarea { min-height: 200px }
     color: $colorMediumGrey;
   }
 
-  &[disabled],
-  &[disabled="disabled"],
-  &[disabled],
   select {
     @include appearance(none);
     padding: 1em;
