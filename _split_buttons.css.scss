@@ -83,7 +83,10 @@
     }
   }
 
-  @include media($breakTabletLandscape) { display: inline-block }
+  @include media($breakTabletLandscape) {
+    display: inline-block;
+    width: auto;
+  }
 
   &.dark {
     background: $colorDarkGrey;
