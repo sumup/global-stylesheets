@@ -93,3 +93,13 @@ $layoutCornerRadius: 3px;
 @mixin static-image($url) {
   background-image: url('https://static.sumup.com/assets/images/marketing/#{$url}');
 }
+
+//-------------------------------------
+// Text truncation ("...")
+//-------------------------------------
+
+@mixin truncate($percent) {
+  text-overflow: ellipsis;
+  width: #{$percent};
+  overflow: hidden;
+}
