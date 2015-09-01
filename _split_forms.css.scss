@@ -226,9 +226,6 @@ select {
 
   &[disabled],
   &[disabled="disabled"],
-  &[disabled],
-  &[disabled="disabled"],
-  &[readonly],
   &[readonly] {
     @extend %readonly;
   }
@@ -268,8 +265,22 @@ textarea { min-height: 200px }
     }
   }
 
+  /**
+   * Visually hiding default inputs,
+   * but keeping them tabbable
+   */
+
   input[type="radio"],
-  input[type="checkbox"] { display: none }
+  input[type="checkbox"] {
+    border: 0;
+    padding: 0;
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: absolute;
+    width: auto;
+  }
 
   input[type="radio"] + label:before { border-radius: 9px; }
 
@@ -344,12 +355,13 @@ textarea { min-height: 200px }
 
     &[disabled],
     &[disabled="disabled"],
-    &[disabled],
-    &[disabled="disabled"],
-    &[readonly],
     &[readonly] {
       @extend %readonly;
     }
+
+    &:focus,
+    &:hover,
+    &:active { border-color: $colorCorpHighlight }
   }
 }
 
