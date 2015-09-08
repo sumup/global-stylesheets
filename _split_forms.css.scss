@@ -280,6 +280,7 @@ textarea { min-height: 200px }
     overflow: visible;
     position: absolute;
     width: auto;
+    visibility: hidden;
   }
 
   input[type="radio"] + label:before { border-radius: 9px; }
