@@ -72,6 +72,7 @@
 //-------------------------------------
 
 $layoutPagePadding: 1em;
+$layoutCompPadding: 2em;
 $layoutCornerRadius: 3px;
 
 %no-margin { margin: 0 }
@@ -90,8 +91,16 @@ $layoutCornerRadius: 3px;
 // Static URL
 //-------------------------------------
 
-@mixin static-image($url) {
+@mixin static-image($url, $position, $size, $repeat) {
   background-image: url('https://static.sumup.com/assets/images/marketing/#{$url}');
+  background-position: $position;
+  background-size: $size;
+  background-repeat: $repeat;
+}
+
+@mixin hide-mobile($size) {
+  display: none;
+  @include media($size) { display: block }
 }
 
 //-------------------------------------
