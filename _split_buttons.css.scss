@@ -10,7 +10,7 @@
 // .button.bright.outline        - Outline button, with white grey border
 // .button.small                 - Smaller buttons
 // .button.pill                  - Smaller, pill-styled outline buttons
-// 
+//
 // Styleguide 1.0.
 
 .button-set {
@@ -24,6 +24,13 @@
 
   li {
     @include media($breakTabletLandscape) { display: inline-block }
+  }
+
+  .button {
+    margin: 1em 0;
+    &:last-of-type { margin-right: 0 }
+
+    @include media($breakTabletLandscape) { margin: 0 }
   }
 }
 
@@ -114,7 +121,7 @@
   }
 
   &.bright {
-    background: white; 
+    background: white;
     color: $colorDarkGrey;
 
     &:hover,
@@ -132,7 +139,7 @@
   }
 
   &.grey {
-    background: $colorLightGrey; 
+    background: $colorLightGrey;
     color: $colorDarkGrey;
     text-shadow: none;
 
@@ -145,7 +152,7 @@
   }
 
   &.green {
-   background: $colorCorpSecondary; 
+   background: $colorCorpSecondary;
    color: $colorCorpSecondary;
 
    &.outline {
@@ -207,7 +214,7 @@
  * Apply .loading to parent button to enable spinner
  */
 
-&.loading { 
+&.loading {
   @include transition(padding .2s ease-in-out);
   padding-right: 2.5em !important;
 
