@@ -9,7 +9,6 @@
 // 
 // Styleguide 1.0.
 
-@include font-face(museo-rounded, "https://static.sumup.com/fonts/western-latin/MuseoSansRounded-100-webfont", 100);
 @include font-face(museo-rounded, "https://static.sumup.com/fonts/western-latin/MuseoSansRounded-300-webfont", 300);
 @include font-face(museo-rounded, "https://static.sumup.com/fonts/western-latin/MuseoSansRounded-500-webfont", 500);
 
@@ -19,7 +18,7 @@ $fontFamilyDisplay: museo-rounded, Helvetica, Arial, sans-serif;
 body {
   font-family: $fontFamilyBody;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.4em;
   color: $colorDarkGrey;
   -moz-font-feature-settings: "kern=1";
@@ -37,7 +36,7 @@ body {
 
 h1, h2, h3, h4 {
   font-family: $fontFamilyDisplay;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 1;
   margin: 0;
 
