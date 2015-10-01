@@ -22,7 +22,7 @@ label {
   @include transition(color .2s);
   display: block;
   margin-bottom: 1px;
-  font-size: em(10, 14);
+  font-size: .8em;
   font-weight: 300;
   text-transform: uppercase;
   color: $colorDarkGrey;
