@@ -91,7 +91,7 @@ $layoutCornerRadius: 3px;
 // Static URL
 //-------------------------------------
 
-@mixin static-image($url, $position, $size, $repeat) {
+@mixin static-image($url, $position: center center, $size: null, $repeat: no-repeat) {
   background-image: url('https://static.sumup.com/assets/images/marketing/#{$url}');
   background-position: $position;
   background-size: $size;
