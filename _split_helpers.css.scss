@@ -112,3 +112,16 @@ $layoutCornerRadius: 3px;
   width: #{$percent};
   overflow: hidden;
 }
+
+//-------------------------------------
+// Horizontal ruler
+//-------------------------------------
+
+%ruler {
+  content: '';
+  display: block;
+  width: 15em;
+  height: 1px;
+  margin: 3 * $layoutPagePadding auto;
+  background: $colorLightGrey;
+}
