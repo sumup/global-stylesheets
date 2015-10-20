@@ -92,7 +92,9 @@ $layoutCornerRadius: 3px;
 //-------------------------------------
 
 @mixin static-image($url, $position: center center, $size: null, $repeat: no-repeat) {
-  background-image: url('https://static.sumup.com/assets/images/marketing/#{$url}');
+  $localhost: 'http://127.0.0.1:8080';
+  $remotehost: 'https://static.sumup.com';
+  background-image: url($remotehost + '/assets/images/marketing/#{$url}');
   background-position: $position;
   background-size: $size;
   background-repeat: $repeat;
