@@ -233,7 +233,7 @@ select {
 
   &.parsley-success,
   &.ng-valid.ng-dirty {
-    border: 1px solid $colorSuccess !important;
+    border: 1px solid $colorSuccess;
   }
 }
 
