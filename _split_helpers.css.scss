@@ -91,13 +91,27 @@ $layoutCornerRadius: 3px;
 // Static URL
 //-------------------------------------
 
+$localhost: 'http://127.0.0.1:8080';
+$remotehost: 'https://static.sumup.com';
+
+$staticURL: $remotehost + '/assets/images/marketing';
+
 @mixin static-image($url, $position: center center, $size: null, $repeat: no-repeat) {
-  $localhost: 'http://127.0.0.1:8080';
-  $remotehost: 'https://static.sumup.com';
-  background-image: url($remotehost + '/assets/images/marketing/#{$url}');
+  background-image: url($staticURL + '/#{$url}');
   background-position: $position;
   background-size: $size;
   background-repeat: $repeat;
+}
+
+@mixin static-hero($filename, $position: center center) {
+  background-image: url($staticURL + '/#{$filename}-small.jpg');
+  background-position: $position;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include media($breakTabletLandscape) {
+    background-image: url($staticURL + '/#{$filename}.jpg');
+  }
 }
 
 @mixin hide-mobile($size) {
