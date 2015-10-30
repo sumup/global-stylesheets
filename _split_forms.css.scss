@@ -50,7 +50,7 @@ label {
 .inline-inputs {
   @include row;
 
-  li {
+  & > li {
     width: 48%;
     padding: 0;
     display: inline-block;
