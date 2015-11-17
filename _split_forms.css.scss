@@ -99,6 +99,17 @@ label {
       }
     }
   }
+
+  /**
+   * Side by side, but width variable widths
+   */
+
+  &.floated {
+    & > li {
+      width: auto;
+      float: left;
+    }
+  }
 }
 
 .date-selects.inline-inputs {
