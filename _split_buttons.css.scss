@@ -186,6 +186,23 @@
     }
   }
 
+  &.tiny {
+    padding: .5em;
+    font-size: 0.7em;
+
+    &.loading .spinner {
+      background-size: .8em;
+      top: 0.3em;
+      right: 0.3em;
+    }
+
+    .checkmark {
+      width: 12px;
+      height: 16px;
+      margin-right: 3px;
+    }
+  }
+
   &.pill {
     @extend %outline-button;
   }
