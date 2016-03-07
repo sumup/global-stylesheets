@@ -50,8 +50,10 @@ label {
 .inline-inputs {
   @include row;
 
+  $width: 48%;
+
   & > li {
-    width: 48%;
+    width: $width;
     padding: 0;
     display: inline-block;
     float: left;
@@ -95,7 +97,7 @@ label {
       }
 
       @include media($breakTabletLandscape) {
-        width: 46%;
+        width: $width;
       }
     }
   }
