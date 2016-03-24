@@ -67,3 +67,21 @@
     @include transform(translateY(0));
   }
 }
+
+@include keyframes(shake) {
+  10%, 90% {
+    @include transform(translate3d(-1px, 0, 0));
+  }
+
+  20%, 80% {
+    @include transform(translate3d(2px, 0, 0));
+  }
+
+  30%, 50%, 70% {
+    @include transform(translate3d(-4px, 0, 0));
+  }
+
+  40%, 60% {
+    @include transform(translate3d(4px, 0, 0));
+  }
+}
