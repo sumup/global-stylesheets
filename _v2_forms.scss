@@ -50,10 +50,8 @@ label {
 .inline-inputs {
   @include row;
 
-  $width: 48%;
-
   & > li {
-    width: $width;
+    width: 48%;
     padding: 0;
     display: inline-block;
     float: left;
@@ -97,7 +95,7 @@ label {
       }
 
       @include media($breakTabletLandscape) {
-        width: $width;
+        width: 46%;
       }
     }
   }
@@ -183,12 +181,6 @@ label {
 
       &:nth-child(2) { @extend %margin-top-small }
     }
-
-    &.detach {
-      > li.warning {
-        border-top: 1px solid $colorWarningDarker !important;
-      }
-    }
   }
 }
 
@@ -207,6 +199,7 @@ label {
 // Default inputs
 //-------------------------------------
 
+input,
 input[type="text"],
 input[type="url"],
 input[type="email"],
