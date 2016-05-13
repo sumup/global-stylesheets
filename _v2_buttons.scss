@@ -74,6 +74,7 @@
   &:focus {
     @include transition(all .2s cubic-bezier(.4, .0, .2, 1));
     background: darken($colorCorpHighlight, 5%);
+    color: white;
   }
 
   &.outline {
