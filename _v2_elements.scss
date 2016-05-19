@@ -1,7 +1,7 @@
 // Common DOM elements such as hyperlinks, lists, images, code, etc.
 //
 // .styled                       - Add little arrow pointers to each list item
-// 
+//
 // Styleguide 1.0.
 
 //-------------------------------------
@@ -72,7 +72,7 @@ ul.checklist {
     @extend %no-margin-bottom;
     padding: 1em 2em 1em 3em !important;
     border-bottom: 1px solid $colorLightGrey;
-    
+
     &:last-child { border-bottom: none }
 
     &:before {
@@ -122,7 +122,7 @@ figcaption {
   text-transform: none;
   color: $colorDarkGrey;
   padding-left: 0;
-  position: static;
+  position: relative;
 
   strong { color: $colorCorpHighlight }
 
