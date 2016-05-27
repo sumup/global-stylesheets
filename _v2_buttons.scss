@@ -216,7 +216,7 @@
  * Apply .loading to parent button to enable spinner
  */
 
-&.loading {
+.loading {
   @include transition(padding .2s ease-in-out);
   padding-right: 2.5em !important;
 
