@@ -124,6 +124,11 @@ $staticURL: $remotehost + '/assets/images/marketing';
   @include media($size) { display: block }
 }
 
+@mixin hide-desktop($size) {
+  display: block;
+  @include media($size) { display: none }
+}
+
 //-------------------------------------
 // Text truncation ("...")
 //-------------------------------------
