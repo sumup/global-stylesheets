@@ -28,6 +28,9 @@ $breakTabletPortrait: new-breakpoint(min-width 481px);
 $breakTabletLandscape: new-breakpoint(min-width 769px);
 $breakDesktop: new-breakpoint(min-width 1025px);
 $breakLargescreen: new-breakpoint(min-width 1441px);
+
+$untilBreakPhonePortrait: new-breakpoint(max-width 320px);
+$untilBreakTabletPortrait: new-breakpoint(max-width 480px);
 $untilBreakTabletLandscape: new-breakpoint(max-width 768px);
 $untilBreakDesktop: new-breakpoint(max-width $max-width);
 
