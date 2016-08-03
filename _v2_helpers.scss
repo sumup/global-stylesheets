@@ -80,6 +80,15 @@ $layoutPagePadding: 1em;
 $layoutCompPadding: 2em;
 $layoutCornerRadius: 3px;
 
+$margin-top-tiny: .3em;
+$margin-top-small: .5em;
+$margin-top-medium: 1em;
+$margin-top-large: 2em;
+$margin-bottom-tiny: .3em;
+$margin-bottom-small: .5em;
+$margin-bottom-medium: 1em;
+$margin-bottom-large: 2em;
+
 %no-margin { margin: 0 }
 %no-margin-top { margin-top: 0 }
 %no-margin-bottom { margin-bottom: 0 }
