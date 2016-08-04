@@ -6,7 +6,7 @@
 // blockquote									- Styles for blockquotes
 // blockquote > span					- Blockquote body
 // blockquote > cite					- Blockquote cite
-// 
+//
 // Styleguide 1.0.
 
 @include font-face(museo-rounded, "https://static.sumup.com/fonts/western-latin/MuseoSansRounded-300-webfont", 300);
@@ -52,11 +52,11 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-	font-size: 2em;
+  font-size: 2em;
 
-	@include media($breakTabletPortrait) { font-size: 2.25em }
+  @include media($breakTabletPortrait) { font-size: 2.25em }
   @include media($breakTabletLandscape) { font-size: 2.5em; }
-	@include media($breakDesktop) { font-size: 2.75em }
+  @include media($breakDesktop) { font-size: 2.75em }
 }
 
 h2 { font-size: 1.6em }
