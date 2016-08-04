@@ -6,8 +6,6 @@
 // .form-list li								- All inputs should be wrapper inside a <li>, within .form-list
 // .form-list li.custom					- Wrapper for custom checkboxes and radio buttons
 // .form-list li.custom.select	- Wrapper for custom select inputs, with <select> as children
-// .validation-list 						- Error <ul> lists, whose messages should be wrapped within <li> elements
-// .validation-list.detach 			- Error <ul> lists, specifically made for checkboxes, radio buttons, and floating inputs
 //
 // Styleguide 1.0.
 
@@ -62,10 +60,6 @@ label {
 
     &:nth-of-type(even) {
       float: right;
-    }
-
-    ul.validation-list li {
-      width: 100%;
     }
   }
 
@@ -125,77 +119,6 @@ label {
 //-------------------------------------
 
 .parsley-errors-list,
-.validation-list {
-  font-size: em(12);
-  position: relative;
-  z-index: 17;
-
-  li {
-    @include transition;
-    @include border-bottom-radius($layoutCornerRadius);
-    position: relative;
-    top: -1px;
-    line-height: 1;
-    border-left: 1px solid $colorError;
-    border-bottom: 1px solid $colorError;
-    border-right: 1px solid $colorError;
-    background: $colorError;
-    color: $colorOffWhite;
-    padding: .5em 1em !important;
-
-    &.ng-hide-remove {
-      @include animation(fadeInDown .2s ease-in);
-    }
-
-    &.ng-hide-add-active {
-      position: absolute;
-      width: 100%;
-      @include animation(fadeOutUp .2s ease-in);
-    }
-
-    &.warning {
-      border-top: 1px solid $colorWarningDarker !important;
-      border-left: 1px solid $colorWarningDarker !important;
-      border-bottom: 1px solid $colorWarningDarker !important;
-      border-right: 1px solid $colorWarningDarker !important;
-      background: $colorWarningDarker !important;
-    }
-
-    p { margin: 0 }
-  }
-}
-
-.detach {
-  &.parsley-errors-list {
-    li {
-      @extend %margin-bottom-medium;
-      @extend %margin-top-small;
-      @include border-top-radius($layoutCornerRadius);
-      border-top: 1px solid $colorError;
-    }
-  }
-
-  &.validation-list {
-    li {
-      @include border-top-radius($layoutCornerRadius);
-      border-top: 1px solid $colorError;
-
-      &:nth-child(2) { @extend %margin-top-small }
-    }
-  }
-}
-
-/**
- * Errored
- */
-
-.active-validation-list {
-  .parsley-error,
-  .ng-invalid.ng-dirty {
-    border: 1px solid $colorError;
-  }
-}
-
 //-------------------------------------
 // Default inputs
 //-------------------------------------
