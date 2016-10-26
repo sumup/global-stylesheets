@@ -134,12 +134,12 @@ textarea,
 select {
   @include appearance(none);
   @include transition (border-color .2s);
-  @include placeholder { color: $colorLightGrey };
+  @include placeholder { color: $colorBrandInputs };
   outline: none;
   background: white;
   width: 100%;
   border: 1px solid;
-  border-color: $colorLightGrey;
+  border-color: $colorBrandInputs;
   border-radius: $layoutCornerRadius;
   padding: 1em;
   line-height: 1;
@@ -196,7 +196,7 @@ textarea { min-height: 200px }
       position: absolute;
       left: 0;
       top: 2px;
-      border: 1px solid $colorLightGrey;
+      border: 1px solid $colorBrandInputs;
       background-color: white;
     }
   }
